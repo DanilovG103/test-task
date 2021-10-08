@@ -13,7 +13,7 @@ interface Props {
 
 const Aside = styled.aside`
   padding: 30px 60px;
-  background: ${Colors.purple};
+  background: ${Colors.purple[0]};
   float: left;
   min-height: 100vh;
 `
@@ -39,7 +39,7 @@ const LogoWrapper = styled.div`
 const Title = styled.p`
   font-family: MuseoModerno;
   font-weight: 600;
-  color: ${Colors.gray};
+  color: ${Colors.gray[0]};
   font-size: 30px;
   margin-left: 10px;
 `

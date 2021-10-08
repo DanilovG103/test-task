@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
+import { Colors } from '../src/theme/colors'
 
 const Global = createGlobalStyle`
   * {
@@ -7,6 +8,9 @@ const Global = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
+  }
+  body {
+    background: ${Colors.lightGray};
   }
 `
 
