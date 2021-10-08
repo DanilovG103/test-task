@@ -15,7 +15,7 @@ export const NotificationsIcon = (props: React.SVGProps<SVGSVGElement>) => {
           d="M28.302 16.698a7.5 7.5 0 00-12.21 8.25c.072.149.096.316.068.48L15.5 28.6a.748.748 0 00.75.9h.15l3.21-.645a.946.946 0 01.48.067 7.5 7.5 0 008.25-12.21l-.038-.014zM20 22.75a.75.75 0 110-1.5.75.75 0 010 1.5zm3 0a.75.75 0 110-1.5.75.75 0 010 1.5zm3 0a.75.75 0 110-1.5.75.75 0 010 1.5z"
           fill={Colors.white}
         />
-        <circle cx={29.5} cy={16.5} r={3.5} fill={Colors.green} />
+        <circle cx={29.5} cy={16.5} r={3.5} fill={Colors.green[0]} />
       </g>
       <defs>
         <filter
