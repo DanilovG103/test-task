@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import Head from 'next/head'
+import { AsideMenu } from "./AsideMenu"
 
 interface LayoutProps {
     title: string
@@ -13,7 +14,8 @@ export const Layout = ({ children, title }: LayoutProps) => {
             <title>{title}</title>
             <meta charSet='utf-8'/>
         </Head>
-        <main>  
+        <main>
+            <AsideMenu />  
             {children}
         </main>
         </>
