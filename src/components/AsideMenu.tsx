@@ -14,7 +14,7 @@ interface Props {
 const Aside = styled.aside`
   padding: 30px 60px;
   background: ${Colors.purple[0]};
-  float: left;
+  grid-area: aside;
   min-height: 100vh;
 `
 

@@ -10,7 +10,17 @@ interface LayoutProps {
 }
 
 const Wrapper = styled.div`
-    padding: 50px 50px 50px 270px;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-areas: "aside header header"
+                         "aside main main"
+                         "aside main main";
+`
+
+const Main = styled.main`
+    grid-area: main;
+    padding: 35px;
 `
 
 export const Layout = ({ children, title }: LayoutProps) => {
@@ -20,14 +30,13 @@ export const Layout = ({ children, title }: LayoutProps) => {
             <title>{title}</title>
             <meta charSet='utf-8'/>
         </Head>
-        <main>
+        <Wrapper>
             <AsideMenu />
             <Header />
-            <Wrapper>
-            {children}
-
-            </Wrapper>
-        </main>
+            <Main>
+                {children}
+            </Main>
+        </Wrapper>
         </>
     )
 }

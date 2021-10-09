@@ -6,6 +6,7 @@ import User from '../assets/images/User.png'
 import { NotificationsIcon } from '../assets/icons/Notifications'
 
 const HeaderBlock = styled.header`
+  grid-area: header;
   background-color: ${Colors.white};
   display: flex;
   align-items: center;
