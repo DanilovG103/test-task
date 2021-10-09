@@ -38,10 +38,6 @@ const ResearchBlock = styled.label`
   padding: 10px 25px 30px;
   background-color: ${Colors.gray[3]};
   border-radius: 10px;
-  position: absolute;
-  width: 365px;
-  bottom: 60px;
-  left: 285px;
 `
 
 const Row = styled.div`
