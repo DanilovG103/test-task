@@ -8,9 +8,7 @@ import { ClockIcon } from '../assets/icons/Clock'
 
 const Wrapper = styled.div`
   background-color: ${Colors.white};
-  grid-column-start: 1;
-  grid-row-start: 4;
-  grid-row-end: 7;
+  grid-area: research;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -23,9 +21,9 @@ const IconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: sticky;
   padding: 10px 8px;
-  left: 570px;
+  width: 65px;
 `
 
 const Checked = styled.p`

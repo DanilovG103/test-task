@@ -12,18 +12,26 @@ const Greeting = styled.p`
 `
 
 const Wrapper = styled.div`
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-auto-rows: 100px;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+  grid-template-columns: 0.8fr 1fr 0.8fr;
+  grid-template-areas: "programs programs messages"
+                       "research sessions messages";
 `
 
 
 const Third = styled.div`
-  grid-column-start: 2;
+  grid-area: sessions;
   background-color: ${Colors.white};
   border-radius: 20px;
+`
+
+const Second = styled.div`
+  grid-area: messages;
+  background-color: ${Colors.white};
+  border-radius: 20px;
+  margin-top: 20px;
 `
 
 const Home: NextPage = () => {
@@ -34,6 +42,7 @@ const Home: NextPage = () => {
         <ActivePrograms />
         <Research />
         <Third>3</Third>
+        <Second>Messages</Second>
       </Wrapper>
     </Layout>
   )

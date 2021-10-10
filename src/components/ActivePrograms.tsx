@@ -13,10 +13,7 @@ const Programs = styled.div`
   flex-direction: column;
   justify-content: center;
   border-radius: 20px;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  grid-area: programs;
 `
 
 const Title = styled.p`
