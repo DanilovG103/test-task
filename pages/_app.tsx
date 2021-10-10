@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
+import { Provider } from 'react-redux'
 import { createGlobalStyle } from 'styled-components'
+import { store } from '../src/store'
 import { Colors } from '../src/theme/colors'
 
 const Global = createGlobalStyle`
@@ -16,10 +18,10 @@ const Global = createGlobalStyle`
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-    <Global />
-    <Component {...pageProps} />
-    </>
+    <Provider store={store}>
+      <Global />
+      <Component {...pageProps} />
+    </Provider>
   )
 }
 export default MyApp
