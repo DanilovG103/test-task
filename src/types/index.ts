@@ -1,4 +1,4 @@
-export interface SessionsProps {
+interface SessionsProps {
   id: string
   class: string
   time: string
@@ -8,7 +8,7 @@ export interface SessionsProps {
   month: string
 }
 
-export interface MessagesProps {
+interface MessagesProps {
   id: string
   name: string
   avatar: string
@@ -16,8 +16,18 @@ export interface MessagesProps {
   time: string
 }
 
-export interface StoriesProps {
+interface StoriesProps {
   id: string
   name: string
   avatar: string
+}
+
+export interface AppState {
+  sessions: SessionsProps[]
+  messages: MessagesProps[]
+  stories: StoriesProps[]
+}
+
+export type State = {
+  data: AppState
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { SessionsProps } from 'pages/api/types'
 import { getSessions } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
+import { selectData } from 'src/store/selectData'
 
 const Wrapper = styled.div`
   grid-area: sessions;
@@ -102,7 +102,7 @@ const Container = styled.div`
 
 export const Sessions = () => {
   const [page, setPage] = useState(1)
-  const { sessions } = useSelector(state => state.data)
+  const { sessions } = useSelector(selectData)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export const Sessions = () => {
       <Info>Date</Info>
       <Info>Class</Info>
       <Info>Time</Info>
-      {(sessions as SessionsProps[]).map(item => (
+      {sessions.map(item => (
         <Row key={item.id}>
           <DateBlock>
             <DayOfWeek>{item.dayOfWeek}</DayOfWeek>

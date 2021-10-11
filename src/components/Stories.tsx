@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStories } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
+import { selectData } from 'src/store/selectData'
 import { PlusIcon } from 'assets/icons/Plus'
-import { StoriesProps } from 'pages/api/types'
 
 const Wrapper = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ const Avatar = styled.img`
 `
 
 export const Stories = () => {
-  const { stories } = useSelector(state => state.data)
+  const { stories } = useSelector(selectData)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export const Stories = () => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
-      {(stories as StoriesProps[]).map(item => (
+      {stories.map(item => (
         <Block key={item.id}>
           <Avatar src={item.avatar} alt={item.name}/>
           <Name>{item.name}</Name>
