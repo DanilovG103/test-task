@@ -5,13 +5,15 @@ export const Colors = {
   lightPurple: '#C0BEFF',
   red: ['#EC441E', '#EE2A4A', '#EE3637','#FF2C55'],
   gray: [
-    '#DEDDFF', 
-    '#9592A6', 
-    '#EEEEEE',
-    '#FAFAFF',
-    '#868597',
-    '#65708D',
-    '#E7E7FF'
+    '#DEDDFF', //0
+    '#9592A6', //1
+    '#EEEEEE', //2
+    '#FAFAFF', //3
+    '#868597', //4
+    '#65708D', //5
+    '#E7E7FF', //6
+    '#77838F', //7
+    '#E3E2E5', //8
   ],
   lightGray: '#F0EFF5',
   green: ['#6FCF97','#4ED964'],

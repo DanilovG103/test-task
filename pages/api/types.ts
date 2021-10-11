@@ -15,3 +15,9 @@ export interface MessagesProps {
   content: string
   time: string
 }
+
+export interface StoriesProps {
+  id: string
+  name: string
+  avatar: string
+}

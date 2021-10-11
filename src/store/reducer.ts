@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   sessions: [],
   messages: [],
+  stories: []
 }
 
 export const getSessions = createAsyncThunk('sessions/getSessions',
@@ -19,6 +20,13 @@ export const getMessages = createAsyncThunk('messages/getMessages',
   }
 )
 
+export const getStories = createAsyncThunk('stories/getStories', 
+  async () => {
+    const response = await fetch('https://6162c0b8c483380017300717.mockapi.io/api/v1/stories')
+    return await response.json()
+  }
+)
+
 const dataSlice = createSlice({
   name: "data",
   initialState,
@@ -27,8 +35,13 @@ const dataSlice = createSlice({
     builder.addCase(getSessions.fulfilled ,( state, { payload } ) => {
       state.sessions = state.sessions.concat(payload)
     })
+
     builder.addCase(getMessages.fulfilled, (state, { payload }) => {
       state.messages = payload
+    })
+
+    builder.addCase(getStories.fulfilled, (state, { payload }) => {
+      state.stories = payload
     })
   }
 })
