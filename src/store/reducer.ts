@@ -18,7 +18,7 @@ const dataSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getSessions.fulfilled ,( state, { payload } ) => {
-      state.sessions = payload
+      state.sessions = state.sessions.concat(payload)
     })
   }
 })

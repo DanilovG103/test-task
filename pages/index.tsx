@@ -4,6 +4,10 @@ import { Layout } from '../src/components/Layout'
 import { Colors } from '../src/theme/colors'
 import { ActivePrograms } from '../src/components/ActivePrograms'
 import { Research } from '../src/components/Research'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { getSessions } from '../src/store/reducer'
+import { Sessions } from '../src/components/Sessions'
 
 const Greeting = styled.p`
   color: ${Colors.purple[0]};
@@ -21,12 +25,6 @@ const Wrapper = styled.div`
 `
 
 
-const Third = styled.div`
-  grid-area: sessions;
-  background-color: ${Colors.white};
-  border-radius: 20px;
-`
-
 const Second = styled.div`
   grid-area: messages;
   background-color: ${Colors.white};
@@ -41,7 +39,7 @@ const Home: NextPage = () => {
       <Wrapper>
         <ActivePrograms />
         <Research />
-        <Third>3</Third>
+        <Sessions />
         <Second>Messages</Second>
       </Wrapper>
     </Layout>

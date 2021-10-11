@@ -21,7 +21,7 @@ const IconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
+  position: absolute;
   padding: 10px 8px;
   width: 65px;
 `
@@ -32,10 +32,11 @@ const Checked = styled.p`
   font-size: 8px;
 `
 
-const ResearchBlock = styled.label`
+const ResearchBlock = styled.div`
   padding: 10px 25px 30px;
   background-color: ${Colors.gray[3]};
   border-radius: 10px;
+  position: absolute;
 `
 
 const Row = styled.div`
