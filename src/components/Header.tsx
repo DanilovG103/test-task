@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Colors } from '../theme/colors'
-import User from '../assets/images/User.png'
-import { NotificationsIcon } from '../assets/icons/Notifications'
+import User from '../../assets/images/User.png'
+import { NotificationsIcon } from '../../assets/icons/Notifications'
 
 const HeaderBlock = styled.header`
   grid-area: header;

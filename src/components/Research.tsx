@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Colors } from '../theme/colors'
-import ResearchImage from '../assets/images/research.png'
-import { CheckMark } from '../assets/icons/CheckMark'
-import { ClockIcon } from '../assets/icons/Clock'
+import ResearchImage from '../../assets/images/research.png'
+import { CheckMark } from '../../assets/icons/CheckMark'
+import { ClockIcon } from '../../assets/icons/Clock'
 
 const Wrapper = styled.div`
   background-color: ${Colors.white};

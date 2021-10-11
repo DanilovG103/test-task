@@ -7,3 +7,11 @@ export interface SessionsProps {
   dayOfWeek: string
   month: string
 }
+
+export interface MessagesProps {
+  id: string
+  name: string
+  avatar: string
+  content: string
+  time: string
+}

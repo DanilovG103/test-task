@@ -4,10 +4,8 @@ import { Layout } from '../src/components/Layout'
 import { Colors } from '../src/theme/colors'
 import { ActivePrograms } from '../src/components/ActivePrograms'
 import { Research } from '../src/components/Research'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
-import { getSessions } from '../src/store/reducer'
 import { Sessions } from '../src/components/Sessions'
+import { Messages } from '../src/components/Messages'
 
 const Greeting = styled.p`
   color: ${Colors.purple[0]};
@@ -24,14 +22,6 @@ const Wrapper = styled.div`
                        "research sessions messages";
 `
 
-
-const Second = styled.div`
-  grid-area: messages;
-  background-color: ${Colors.white};
-  border-radius: 20px;
-  margin-top: 20px;
-`
-
 const Home: NextPage = () => {
   return (
     <Layout title="Home">
@@ -40,7 +30,7 @@ const Home: NextPage = () => {
         <ActivePrograms />
         <Research />
         <Sessions />
-        <Second>Messages</Second>
+        <Messages />
       </Wrapper>
     </Layout>
   )

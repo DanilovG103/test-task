@@ -12,6 +12,13 @@ export const getSessions = createAsyncThunk('sessions/getSessions',
   }
 )
 
+export const getMessages = createAsyncThunk('messages/getMessages',
+  async () => {
+    const response = await fetch('https://6162c0b8c483380017300717.mockapi.io/api/v1/messages')
+    return await response.json()
+  }
+)
+
 const dataSlice = createSlice({
   name: "data",
   initialState,
@@ -19,6 +26,9 @@ const dataSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getSessions.fulfilled ,( state, { payload } ) => {
       state.sessions = state.sessions.concat(payload)
+    })
+    builder.addCase(getMessages.fulfilled, (state, { payload }) => {
+      state.messages = payload
     })
   }
 })
