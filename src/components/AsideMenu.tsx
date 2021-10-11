@@ -2,10 +2,12 @@ import React from 'react'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { Colors } from '../theme/colors'
-import { CoursesIcon } from '../../assets/icons/Courses'
-import { DashboardIcon } from '../../assets/icons/Dashboard'
-import { Logo } from '../../assets/icons/Logo'
+
+import { CoursesIcon } from 'assets/icons/Courses'
+import { DashboardIcon } from 'assets/icons/Dashboard'
+import { Logo } from 'assets/icons/Logo'
+
+import { Colors } from 'src/theme/colors'
 
 interface Props {
   isActive: boolean

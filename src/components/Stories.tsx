@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
-import { getStories } from '../store/reducer'
-import { Colors } from '../theme/colors'
-import { PlusIcon } from '../../assets/icons/Plus'
-import { StoriesProps } from '../../pages/api/types'
+import { getStories } from 'src/store/reducer'
+import { Colors } from 'src/theme/colors'
+import { PlusIcon } from 'assets/icons/Plus'
+import { StoriesProps } from 'pages/api/types'
 
 const Wrapper = styled.div`
   display: flex;

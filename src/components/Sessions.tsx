@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { SessionsProps } from '../../pages/api/types'
-import { getSessions } from '../store/reducer'
-import { Colors } from '../theme/colors'
+import { SessionsProps } from 'pages/api/types'
+import { getSessions } from 'src/store/reducer'
+import { Colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
   grid-area: sessions;

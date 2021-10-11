@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
-import { Layout } from '../src/components/Layout'
-import { Colors } from '../src/theme/colors'
-import { ActivePrograms } from '../src/components/ActivePrograms'
-import { Research } from '../src/components/Research'
-import { Sessions } from '../src/components/Sessions'
-import { Messages } from '../src/components/Messages'
+
+import { Layout } from 'src/components/Layout'
+import { Colors } from 'src/theme/colors'
+import { ActivePrograms } from 'src/components/ActivePrograms'
+import { Research } from 'src/components/Research'
+import { Sessions } from 'src/components/Sessions'
+import { Messages } from 'src/components/Messages'
 
 const Greeting = styled.p`
   color: ${Colors.purple[0]};

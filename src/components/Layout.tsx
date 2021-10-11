@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react"
 import Head from 'next/head'
-import { AsideMenu } from "./AsideMenu"
-import { Header } from "./Header"
 import styled from "styled-components"
+import { AsideMenu } from "src/components/AsideMenu"
+import { Header } from "src/components/Header"
 
 interface LayoutProps {
     title: string

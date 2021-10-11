@@ -1,5 +1,5 @@
 import React from "react"
-import { Colors } from "../../src/theme/colors"
+import { Colors } from "src/theme/colors"
 
 export const ClockIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (

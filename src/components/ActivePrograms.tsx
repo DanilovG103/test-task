@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Colors } from '../theme/colors'
-import University from '../../assets/images/university.png'
-import Academy from '../../assets/images/academy.png'
+import { Colors } from 'src/theme/colors'
+
+import University from 'assets/images/university.png'
+import Academy from 'assets/images/academy.png'
 
 const Programs = styled.div`
   margin-top: 20px;
