@@ -65,8 +65,9 @@ const ClassBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 220px;
-  margin: 0 130px;
+  width: 40%;
+  margin-left: 18%;
+  margin-right: 11%;
 `
 
 const Class = styled.p`
