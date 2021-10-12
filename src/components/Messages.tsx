@@ -45,6 +45,9 @@ const MessagesWrapper = styled.div`
   flex-direction: column;
   padding: 10px 20px;
   overflow-y: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Messages = () => {

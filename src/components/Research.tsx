@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  height: 340px;
 `
 
 const IconWrapper = styled.div`
@@ -22,9 +23,9 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 35%;
+  left: 32%;
   padding: 10px 8px;
-  width: 65px;
+  width: 60px;
 `
 
 const Checked = styled.p`
@@ -37,8 +38,10 @@ const ResearchBlock = styled.div`
   padding: 10px 25px 30px;
   background-color: ${Colors.gray[3]};
   border-radius: 10px;
-  position: absolute;
-  top: 90%;
+  width: 110%;
+  align-self: center;
+  margin: -20px 0 -110px;
+  z-index: 1;
 `
 
 const Row = styled.div`

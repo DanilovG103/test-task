@@ -12,8 +12,10 @@ const Wrapper = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  height: 330px;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 const Title = styled.p`
@@ -91,6 +93,7 @@ const AddSessions = styled.a<{ isNoData: boolean }>`
   color: ${Colors.purple[1]};
   font-weight: 600;
   align-self: flex-end;
+  margin-top: 7px;
 `
 
 const Container = styled.div`

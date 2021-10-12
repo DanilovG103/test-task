@@ -8,7 +8,6 @@ import { PlusIcon } from 'assets/icons/Plus'
 
 const Wrapper = styled.div`
   display: flex;
-  width: 290px;
   overflow-x: auto;
   padding: 15px;
   align-items: center;
