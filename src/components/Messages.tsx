@@ -40,7 +40,7 @@ const Line = styled.div`
 `
 
 const MessagesWrapper = styled.div`
-  height: 500px;
+  height: 555px;
   display: flex;
   flex-direction: column;
   padding: 10px 20px;

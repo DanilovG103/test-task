@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 340px;
+  height: 400px;
 `
 
 const IconWrapper = styled.div`
