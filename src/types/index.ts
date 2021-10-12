@@ -1,4 +1,4 @@
-interface SessionsProps {
+export interface SessionsProps {
   id: string
   class: string
   time: string
@@ -16,7 +16,7 @@ export interface MessagesProps {
   time: string
 }
 
-interface StoriesProps {
+export interface StoriesProps {
   id: string
   name: string
   avatar: string

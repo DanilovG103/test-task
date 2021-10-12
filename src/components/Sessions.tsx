@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { getSessions } from 'src/store/reducer'
+import { selectSessions } from 'src/store/selectors/selectSessions'
 import { Colors } from 'src/theme/colors'
-import { selectData } from 'src/store/selectData'
 
 const Wrapper = styled.div`
   grid-area: sessions;
@@ -102,7 +102,7 @@ const Container = styled.div`
 
 export const Sessions = () => {
   const [page, setPage] = useState(1)
-  const { sessions } = useSelector(selectData)
+  const sessions = useSelector(selectSessions)
   const dispatch = useDispatch()
 
   useEffect(() => {

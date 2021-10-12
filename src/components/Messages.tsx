@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { getMessages } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
 import { Stories } from 'src/components/Stories'
-import { selectData } from 'src/store/selectData'
+import { selectMessages } from 'src/store/selectors/selectMessages'
 
 import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
@@ -48,7 +48,7 @@ const MessagesWrapper = styled.div`
 `
 
 export const Messages = () => {
-  const { messages } = useSelector(selectData)
+  const messages = useSelector(selectMessages)
   const dispatch = useDispatch()
 
   useEffect(() => {

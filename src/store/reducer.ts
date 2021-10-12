@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { AppState } from "src/types";
 
-const initialState = {
+const initialState: AppState = {
   sessions: [],
   messages: [],
   stories: []
@@ -36,11 +37,11 @@ const dataSlice = createSlice({
       state.sessions = state.sessions.concat(payload)
     })
 
-    builder.addCase(getMessages.fulfilled, (state, { payload }) => {
+    builder.addCase(getMessages.fulfilled, ( state, { payload }) => {
       state.messages = payload
     })
 
-    builder.addCase(getStories.fulfilled, (state, { payload }) => {
+    builder.addCase(getStories.fulfilled, ( state, { payload }) => {
       state.stories = payload
     })
   }

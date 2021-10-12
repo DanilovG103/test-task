@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStories } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
-import { selectData } from 'src/store/selectData'
+import { selectStories } from 'src/store/selectors/selectStories'
 import { PlusIcon } from 'assets/icons/Plus'
 
 const Wrapper = styled.div`
@@ -42,7 +42,7 @@ const Avatar = styled.img`
 `
 
 export const Stories = () => {
-  const { stories } = useSelector(selectData)
+  const stories = useSelector(selectStories)
   const dispatch = useDispatch()
 
   useEffect(() => {
