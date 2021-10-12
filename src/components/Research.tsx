@@ -23,7 +23,7 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 32%;
+  left: 30%;
   padding: 10px 8px;
   width: 60px;
 `
