@@ -22,6 +22,7 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
+  left: 35%;
   padding: 10px 8px;
   width: 65px;
 `
@@ -37,6 +38,7 @@ const ResearchBlock = styled.div`
   background-color: ${Colors.gray[3]};
   border-radius: 10px;
   position: absolute;
+  top: 90%;
 `
 
 const Row = styled.div`
