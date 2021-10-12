@@ -8,7 +8,7 @@ interface SessionsProps {
   month: string
 }
 
-interface MessagesProps {
+export interface MessagesProps {
   id: string
   name: string
   avatar: string
