@@ -27,7 +27,6 @@ const Title = styled.p`
 
 const Row = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -42,6 +41,7 @@ const DateBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60px;
 `
 
 const DayOfWeek = styled.p`
@@ -61,8 +61,12 @@ const Month = styled(Day)`
   text-transform: uppercase;
 `
 
-const ClassBlock = styled(DateBlock)`
+const ClassBlock = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  width: 220px;
+  margin: 0 130px;
 `
 
 const Class = styled.p`
@@ -79,7 +83,11 @@ const Description = styled.p`
 const TimeBlock = styled.div`
   border-radius: 11px;
   background: ${Colors.gray[6]};
+  display: flex;
+  justify-content: center;
   padding: 5px;
+  width: 90px;
+  justify-self: flex-end;
 `
 
 const Time = styled.p`
