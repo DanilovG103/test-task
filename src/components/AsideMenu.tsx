@@ -53,13 +53,13 @@ const ActivePageLine = styled.div<Props>`
   border-radius: 5px;
   position: absolute;
   left: 0;
-  display: ${props => props.isActive ? 'block' : 'none'};
+  display: ${(props) => (props.isActive ? 'block' : 'none')};
 `
 
 const NavTitle = styled.a<Props>`
-  color: ${(props) => props.isActive ? Colors.white : Colors.lightPurple};
-  font-weight: ${(props) => props.isActive ? 700 : 400};
-  font-size: ${(props) => props.isActive ? 18 : 15}px;
+  color: ${(props) => (props.isActive ? Colors.white : Colors.lightPurple)};
+  font-weight: ${(props) => (props.isActive ? 700 : 400)};
+  font-size: ${(props) => (props.isActive ? 18 : 15)}px;
   margin-left: 10px;
 `
 
@@ -76,20 +76,20 @@ export const AsideMenu = () => {
           <Logo />
           <Title>Univé</Title>
         </LogoWrapper>
-          <Link href="/">
-            <NavBlock>
-              <ActivePageLine isActive={isHomePage}/>
-              <DashboardIcon isActive={isHomePage}/>
-              <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
-            </NavBlock>
-          </Link>
-          <Link href="/courses">
-            <NavBlock>
-              <ActivePageLine isActive={isCoursesPage}/>
-              <CoursesIcon isActive={isCoursesPage}/>
-              <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
-            </NavBlock>
-          </Link>
+        <Link href="/">
+          <NavBlock>
+            <ActivePageLine isActive={isHomePage} />
+            <DashboardIcon isActive={isHomePage} />
+            <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
+          </NavBlock>
+        </Link>
+        <Link href="/courses">
+          <NavBlock>
+            <ActivePageLine isActive={isCoursesPage} />
+            <CoursesIcon isActive={isCoursesPage} />
+            <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
+          </NavBlock>
+        </Link>
       </Block>
     </Aside>
   )

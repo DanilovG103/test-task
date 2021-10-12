@@ -19,8 +19,9 @@ const Wrapper = styled.div`
   grid-row-gap: 2em;
   grid-column-gap: 2em;
   grid-template-columns: 0.8fr 1fr 0.8fr;
-  grid-template-areas: "programs programs messages"
-                       "research sessions messages";
+  grid-template-areas:
+    'programs programs messages'
+    'research sessions messages';
 `
 
 const Home: NextPage = () => {

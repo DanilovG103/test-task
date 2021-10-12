@@ -28,12 +28,12 @@ const ContentBlock = styled.div`
 const Name = styled.p<StyleProps>`
   color: ${Colors.purple[0]};
   font-size: 13px;
-  font-weight: ${props => props.unread ? 600 : 500};
+  font-weight: ${(props) => (props.unread ? 600 : 500)};
 `
 
 const Content = styled(Name)`
-  color: ${props => props.unread ? Colors.purple[0] : Colors.gray[1]};
-  font-weight: ${props => props.unread ? 600 : 400};
+  color: ${(props) => (props.unread ? Colors.purple[0] : Colors.gray[1])};
+  font-weight: ${(props) => (props.unread ? 600 : 400)};
 `
 
 const Avatar = styled.img`
@@ -58,7 +58,7 @@ const Circle = styled.div<StyleProps>`
   color: ${Colors.white};
   border-radius: 50%;
   font-weight: 500;
-  opacity: ${props => props.unread ? 1 : 0};
+  opacity: ${(props) => (props.unread ? 1 : 0)};
 `
 
 const Time = styled.p`

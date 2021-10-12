@@ -54,7 +54,7 @@ export const Header = () => {
       <IconWrapper>
         <NotificationsIcon />
       </IconWrapper>
-      <Image src={User}/>
+      <Image src={User} />
       <UserBlock>
         <UserName>Mia V</UserName>
         <Description>Student</Description>

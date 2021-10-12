@@ -81,18 +81,18 @@ export const ActivePrograms = () => {
     <Programs>
       <Title>Active Programs</Title>
       <View>
-        <Image src={University}/>
+        <Image src={University} />
         <Row>
           <Info>
             <Label>
               <LabelText>MASTER OF COMPUTER SCIENCE</LabelText>
             </Label>
-            University of Upstate<br />at Brookstone
+            University of Upstate
+            <br />
+            at Brookstone
           </Info>
           <Info>
-            <AverageMark>
-              A-
-            </AverageMark>
+            <AverageMark>A-</AverageMark>
             <Average>
               Academic <br /> average
             </Average>
@@ -101,18 +101,18 @@ export const ActivePrograms = () => {
       </View>
       <Line />
       <View>
-        <Image src={Academy}/>
+        <Image src={Academy} />
         <Row>
           <Info>
             <Label>
               <LabelText>CERTIFICATE UX/UI DESIGN</LabelText>
             </Label>
-            Academy of Art and Technology<br/>at Dursburg
+            Academy of Art and Technology
+            <br />
+            at Dursburg
           </Info>
           <Info>
-            <AverageMark>
-              --
-            </AverageMark>
+            <AverageMark>--</AverageMark>
             <Average>
               Academic <br /> average
             </Average>

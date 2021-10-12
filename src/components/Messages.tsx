@@ -53,18 +53,20 @@ export const Messages = () => {
 
   useEffect(() => {
     dispatch(getMessages())
-  },[dispatch])
+  }, [dispatch])
 
   return (
     <Wrapper>
       <Block>
-        <Image src={User} width={29} height={29}/>
+        <Image src={User} width={29} height={29} />
         <BlockTitle>Messages</BlockTitle>
       </Block>
       <Line />
       <Stories />
       <MessagesWrapper>
-        {messages.map(item => <MessageCard message={item} key={item.id}/> )}
+        {messages.map((item) => (
+          <MessageCard message={item} key={item.id} />
+        ))}
       </MessagesWrapper>
     </Wrapper>
   )

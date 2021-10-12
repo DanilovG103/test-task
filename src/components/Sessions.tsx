@@ -85,8 +85,8 @@ const Time = styled.p`
   font-weight: 600;
 `
 
-const AddSessions = styled.a<{isNoData: boolean}>`
-  display: ${props => props.isNoData ? 'none' : 'block'};
+const AddSessions = styled.a<{ isNoData: boolean }>`
+  display: ${(props) => (props.isNoData ? 'none' : 'block')};
   cursor: pointer;
   color: ${Colors.purple[1]};
   font-weight: 600;
@@ -107,33 +107,36 @@ export const Sessions = () => {
 
   useEffect(() => {
     dispatch(getSessions(page))
-  },[dispatch, page])
+  }, [dispatch, page])
 
   return (
     <Wrapper>
       <Title>Upcoming Sessions</Title>
       <Container>
-      <Info>Date</Info>
-      <Info>Class</Info>
-      <Info>Time</Info>
-      {sessions.map(item => (
-        <Row key={item.id}>
-          <DateBlock>
-            <DayOfWeek>{item.dayOfWeek}</DayOfWeek>
-            <Day>{item.day.toString().length < 2 ? `0${item.day}` : item.day}</Day>
-            <Month>{item.month}</Month>
-          </DateBlock>
-          <ClassBlock>
-            <Class>{item.class}</Class>
-            <Description>{item.description}</Description>
-          </ClassBlock>
-          <TimeBlock>
-            <Time>{item.time}</Time>
-          </TimeBlock>
-        </Row>
-      ))}
+        <Info>Date</Info>
+        <Info>Class</Info>
+        <Info>Time</Info>
+        {sessions.map((item) => (
+          <Row key={item.id}>
+            <DateBlock>
+              <DayOfWeek>{item.dayOfWeek}</DayOfWeek>
+              <Day>
+                {item.day.toString().length < 2 ? `0${item.day}` : item.day}
+              </Day>
+              <Month>{item.month}</Month>
+            </DateBlock>
+            <ClassBlock>
+              <Class>{item.class}</Class>
+              <Description>{item.description}</Description>
+            </ClassBlock>
+            <TimeBlock>
+              <Time>{item.time}</Time>
+            </TimeBlock>
+          </Row>
+        ))}
       </Container>
-      <AddSessions onClick={() => setPage(prev => prev + 1)} 
+      <AddSessions
+        onClick={() => setPage((prev) => prev + 1)}
         isNoData={page === 2}>
         See All Sessions
       </AddSessions>

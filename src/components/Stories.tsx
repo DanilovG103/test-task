@@ -47,7 +47,7 @@ export const Stories = () => {
 
   useEffect(() => {
     dispatch(getStories())
-  },[dispatch])
+  }, [dispatch])
 
   return (
     <Wrapper>
@@ -57,9 +57,9 @@ export const Stories = () => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
-      {stories.map(item => (
+      {stories.map((item) => (
         <Block key={item.id}>
-          <Avatar src={item.avatar} alt={item.name}/>
+          <Avatar src={item.avatar} alt={item.name} />
           <Name>{item.name}</Name>
         </Block>
       ))}
