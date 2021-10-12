@@ -21,7 +21,7 @@ const Container = styled.div`
 const ContentBlock = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-left: 10px;
 `
 
@@ -42,6 +42,7 @@ const Avatar = styled.img`
 `
 
 const StatusBlock = styled(ContentBlock)`
+  margin-left: 0;
   align-items: flex-end;
   width: 65px;
 `
@@ -49,6 +50,7 @@ const StatusBlock = styled(ContentBlock)`
 const Circle = styled.div<StyleProps>`
   width: 25px;
   height: 25px;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
