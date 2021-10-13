@@ -12,6 +12,10 @@ const HeaderBlock = styled.header`
   align-items: center;
   justify-content: flex-end;
   padding: 15px;
+  @media (max-width: 400px) {
+    height: 50px;
+    padding: 15px 5px;
+  }
 `
 
 const Dot = styled.i`
@@ -26,6 +30,9 @@ const DotBlock = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10px;
+  @media (max-width: 400px) {
+    display: none;
+  }
 `
 
 const UserBlock = styled(DotBlock)`
@@ -46,6 +53,27 @@ const Description = styled(UserName)`
 
 const IconWrapper = styled.div`
   margin: 10px 25px 0;
+  @media (max-width: 400px) {
+    margin: 10px 0 0;
+  }
+`
+
+const Circle = styled.div`
+  display: none;
+  background-color: ${Colors.green[0]};
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  right: 12px;
+  top: 27px;
+  @media (max-width: 400px) {
+    display: block;
+  }
+`
+
+const ImageWrapper = styled.div`
+  display: flex;
 `
 
 export const Header = () => {
@@ -54,7 +82,10 @@ export const Header = () => {
       <IconWrapper>
         <NotificationsIcon />
       </IconWrapper>
-      <Image src={User} />
+      <ImageWrapper>
+        <Image src={User} />
+        <Circle />
+      </ImageWrapper>
       <UserBlock>
         <UserName>Mia V</UserName>
         <Description>Student</Description>

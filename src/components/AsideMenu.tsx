@@ -18,6 +18,12 @@ const Aside = styled.aside`
   background: ${Colors.purple[0]};
   grid-area: aside;
   min-height: 100vh;
+  @media (max-width: 400px) {
+    min-height: 0;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
 `
 
 const Block = styled.div`
@@ -30,12 +36,19 @@ const NavBlock = styled.div`
   display: flex;
   margin: 20px 0;
   cursor: pointer;
+  @media (max-width: 400px) {
+    display: none;
+  }
 `
 
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 40px 0;
+  @media (max-width: 400px) {
+    margin: 0;
+    align-self: center;
+  }
 `
 
 const Title = styled.p`
@@ -44,6 +57,9 @@ const Title = styled.p`
   color: ${Colors.gray[0]};
   font-size: 30px;
   margin-left: 10px;
+  @media (max-width: 400px) {
+    display: none;
+  }
 `
 
 const ActivePageLine = styled.div<Props>`

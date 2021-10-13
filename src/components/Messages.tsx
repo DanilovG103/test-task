@@ -12,6 +12,7 @@ import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
 
 const Wrapper = styled.div`
+  display: none;
   grid-area: messages;
   background-color: ${Colors.white};
   border-radius: 20px;

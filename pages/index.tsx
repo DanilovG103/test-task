@@ -22,6 +22,13 @@ const Wrapper = styled.div`
   grid-template-areas:
     'programs programs messages'
     'research sessions messages';
+  @media (max-width: 400px) {
+    grid-template-areas:
+      'programs'
+      'research'
+      'sessions';
+    grid-template-columns: 1fr;
+  }
 `
 
 const Home: NextPage = () => {
