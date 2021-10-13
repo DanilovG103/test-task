@@ -1,50 +1,60 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { AppState } from "src/types";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { AppState } from 'src/types'
 
 const initialState: AppState = {
-  sessions: [],
+  sessions: {
+    count: 0,
+    items: [],
+  },
   messages: [],
-  stories: []
+  stories: [],
 }
 
-export const getSessions = createAsyncThunk('sessions/getSessions',
+export const getSessions = createAsyncThunk(
+  'sessions/getSessions',
   async (page: number) => {
-    const response = await fetch(`https://6162c0b8c483380017300717.mockapi.io/api/v1/sessions?p=${page}&l=3`)
+    const response = await fetch(
+      `https://6162c0b8c483380017300717.mockapi.io/api/v1/sessions?p=${page}&l=3`,
+    )
     return await response.json()
-  }
+  },
 )
 
-export const getMessages = createAsyncThunk('messages/getMessages',
+export const getMessages = createAsyncThunk(
+  'messages/getMessages',
   async () => {
-    const response = await fetch('https://6162c0b8c483380017300717.mockapi.io/api/v1/messages')
+    const response = await fetch(
+      'https://6162c0b8c483380017300717.mockapi.io/api/v1/messages',
+    )
     return await response.json()
-  }
+  },
 )
 
-export const getStories = createAsyncThunk('stories/getStories', 
-  async () => {
-    const response = await fetch('https://6162c0b8c483380017300717.mockapi.io/api/v1/stories')
-    return await response.json()
-  }
-)
+export const getStories = createAsyncThunk('stories/getStories', async () => {
+  const response = await fetch(
+    'https://6162c0b8c483380017300717.mockapi.io/api/v1/stories',
+  )
+  return await response.json()
+})
 
 const dataSlice = createSlice({
-  name: "data",
+  name: 'data',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getSessions.fulfilled ,( state, { payload } ) => {
-      state.sessions = state.sessions.concat(payload)
+    builder.addCase(getSessions.fulfilled, (state, { payload }) => {
+      state.sessions.count = payload.count
+      state.sessions.items = state.sessions.items.concat(payload.items)
     })
 
-    builder.addCase(getMessages.fulfilled, ( state, { payload }) => {
+    builder.addCase(getMessages.fulfilled, (state, { payload }) => {
       state.messages = payload
     })
 
-    builder.addCase(getStories.fulfilled, ( state, { payload }) => {
+    builder.addCase(getStories.fulfilled, (state, { payload }) => {
       state.stories = payload
     })
-  }
+  },
 })
 
 export default dataSlice.reducer

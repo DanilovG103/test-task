@@ -1,4 +1,9 @@
 export interface SessionsProps {
+  count: number
+  items: SessionsItems[]
+}
+
+type SessionsItems = {
   id: string
   class: string
   time: string
@@ -23,7 +28,7 @@ export interface StoriesProps {
 }
 
 export interface AppState {
-  sessions: SessionsProps[]
+  sessions: SessionsProps
   messages: MessagesProps[]
   stories: StoriesProps[]
 }

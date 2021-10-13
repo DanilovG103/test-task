@@ -1,3 +1,4 @@
-import { State, SessionsProps } from "src/types"
+import { State, SessionsProps } from 'src/types'
 
-export const selectSessions = (state: State): SessionsProps[] => state.data.sessions
+export const selectSessions = (state: State): SessionsProps =>
+  state.data.sessions

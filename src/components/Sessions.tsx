@@ -97,8 +97,7 @@ const Time = styled.p`
   font-weight: 600;
 `
 
-const AddSessions = styled.a<{ isNoData: boolean }>`
-  display: ${(props) => (props.isNoData ? 'none' : 'block')};
+const AddSessions = styled.a`
   cursor: pointer;
   color: ${Colors.purple[1]};
   font-weight: 600;
@@ -116,6 +115,7 @@ const Container = styled.div`
 export const Sessions = () => {
   const [page, setPage] = useState(1)
   const sessions = useSelector(selectSessions)
+  const limit = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -129,13 +129,11 @@ export const Sessions = () => {
         <Info>Date</Info>
         <Info>Class</Info>
         <Info>Time</Info>
-        {sessions.map((item) => (
+        {sessions.items.map((item) => (
           <Row key={item.id}>
             <DateBlock>
               <DayOfWeek>{item.dayOfWeek}</DayOfWeek>
-              <Day>
-                {item.day.toString().length < 2 ? `0${item.day}` : item.day}
-              </Day>
+              <Day>{item.day}</Day>
               <Month>{item.month}</Month>
             </DateBlock>
             <ClassBlock>
@@ -148,11 +146,11 @@ export const Sessions = () => {
           </Row>
         ))}
       </Container>
-      <AddSessions
-        onClick={() => setPage((prev) => prev + 1)}
-        isNoData={page === 2}>
-        See All Sessions
-      </AddSessions>
+      {limit && (
+        <AddSessions onClick={() => setPage((prev) => prev + 1)}>
+          See All Sessions
+        </AddSessions>
+      )}
     </Wrapper>
   )
 }
