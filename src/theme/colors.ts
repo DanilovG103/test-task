@@ -1,7 +1,7 @@
 export const Colors = {
   white: '#ffffff',
   black: '#000000',
-  purple: ['#333269', '#5855D6', '#0E1566'],
+  purple: ['#333269', '#5855D6', '#0E1566', 'rgba(88,85,214,0.7)'],
   lightPurple: '#C0BEFF',
   red: ['#EC441E', '#EE2A4A', '#EE3637', '#FF2C55'],
   gray: [
