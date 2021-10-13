@@ -26,11 +26,10 @@ const Block = styled.div`
   border-radius: 20px 20px 0 0;
 `
 
-const BlockTitle = styled.p`
+const Title = styled.p`
   color: ${Colors.purple[0]};
   font-size: 16px;
   font-weight: 500;
-  margin-left: 8px;
 `
 
 const Line = styled.div`
@@ -73,7 +72,7 @@ export const Messages = () => {
       <Block>
         <Image src={User} width={29} height={29} />
         <Circle />
-        <BlockTitle>Messages</BlockTitle>
+        <Title>Messages</Title>
       </Block>
       <Line />
       <Stories />
