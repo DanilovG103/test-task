@@ -18,7 +18,6 @@ const Content = styled.div`
     display: flex;
     background: transparent;
     align-items: center;
-    justify-content: space-between;
     margin: 0;
     padding: 15px;
     position: relative;
@@ -40,24 +39,29 @@ const Row = styled.div`
   justify-content: space-between;
   margin-top: 10px;
   @media (max-width: 400px) {
-    margin: 3px 0;
+    margin: 4px 0 4px 8px;
   }
 `
 
 const Column = styled(Row)`
   flex-direction: column;
-  margin-left: 5px;
 `
 
 const ResearchInfo = styled.p`
   font-weight: 500;
   font-size: 20px;
   color: ${Colors.purple[2]};
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `
 
 const Description = styled.p`
   color: ${Colors.gray[1]};
   font-size: 11px;
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
 `
 
 const DateNumber = styled.p`
@@ -65,11 +69,17 @@ const DateNumber = styled.p`
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `
 
 const DateMonth = styled(DateNumber)`
   font-size: 10px;
   font-weight: 600;
+  @media (max-width: 400px) {
+    font-size: 9px;
+  }
 `
 
 const StatusRow = styled.div`
@@ -80,11 +90,17 @@ const StatusRow = styled.div`
 const Status = styled.p`
   font-style: italic;
   color: ${Colors.red[3]};
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `
 
 const Join = styled.p`
   font-weight: 600;
   color: ${Colors.purple[1]};
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `
 
 const ImageWrapper = styled.div`
