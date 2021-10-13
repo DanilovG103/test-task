@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import { AsideMenu } from 'src/components/AsideMenu'
 import { Header } from 'src/components/Header'
+import { BottomNav } from './BottomNav'
 
 interface LayoutProps {
   title: string
@@ -29,6 +30,9 @@ const Wrapper = styled.div`
 const Main = styled.main`
   grid-area: main;
   padding: 35px;
+  @media (max-width: 400px) {
+    padding: 25px 15px;
+  }
 `
 
 export const Layout = ({ children, title }: LayoutProps) => {
@@ -43,6 +47,7 @@ export const Layout = ({ children, title }: LayoutProps) => {
         <Header />
         <Main>{children}</Main>
       </Wrapper>
+      <BottomNav />
     </>
   )
 }

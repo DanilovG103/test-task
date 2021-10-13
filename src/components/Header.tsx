@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Colors } from 'src/theme/colors'
-import { NotificationsIcon } from 'assets/icons/Notifications'
+import { MessagesIcon } from 'assets/icons/Message'
 import User from 'assets/images/User.png'
+import { useWindowSize } from 'src/hooks/useWindowSize'
 
 const HeaderBlock = styled.header`
   grid-area: header;
@@ -66,7 +67,7 @@ const Circle = styled.div`
   height: 10px;
   border-radius: 50%;
   right: 12px;
-  top: 27px;
+  top: 20px;
   @media (max-width: 400px) {
     display: block;
   }
@@ -77,13 +78,16 @@ const ImageWrapper = styled.div`
 `
 
 export const Header = () => {
+  const { width } = useWindowSize()
+  const ImageSize = width !== undefined && width > 400 ? 40 : 29
+
   return (
     <HeaderBlock>
       <IconWrapper>
-        <NotificationsIcon />
+        <MessagesIcon />
       </IconWrapper>
       <ImageWrapper>
-        <Image src={User} />
+        <Image src={User} alt="User" width={ImageSize} height={ImageSize} />
         <Circle />
       </ImageWrapper>
       <UserBlock>

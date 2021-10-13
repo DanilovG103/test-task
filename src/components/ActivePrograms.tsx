@@ -45,10 +45,13 @@ const LabelText = styled.p`
   font-weight: 600;
 `
 
-const Info = styled.div`
+const Info = styled.div<{ isMobile?: boolean }>`
   margin: 15px 25px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 400px) {
+    display: ${(props) => (props.isMobile ? 'none' : 'block')};
+  }
 `
 
 const Line = styled.div`
@@ -81,7 +84,7 @@ export const ActivePrograms = () => {
     <Programs>
       <Title>Active Programs</Title>
       <View>
-        <Image src={University} />
+        <Image src={University} width={68} height={68} />
         <Row>
           <Info>
             <Label>
@@ -91,7 +94,7 @@ export const ActivePrograms = () => {
             <br />
             at Brookstone
           </Info>
-          <Info>
+          <Info isMobile>
             <AverageMark>A-</AverageMark>
             <Average>
               Academic <br /> average
@@ -101,7 +104,7 @@ export const ActivePrograms = () => {
       </View>
       <Line />
       <View>
-        <Image src={Academy} />
+        <Image src={Academy} width={68} height={68} />
         <Row>
           <Info>
             <Label>
@@ -111,7 +114,7 @@ export const ActivePrograms = () => {
             <br />
             at Dursburg
           </Info>
-          <Info>
+          <Info isMobile>
             <AverageMark>--</AverageMark>
             <Average>
               Academic <br /> average
