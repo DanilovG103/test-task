@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-row-gap: 2em;
   grid-column-gap: 2em;
-  grid-template-columns: 24% 47% 24%;
+  grid-template-columns: 25% 42% 28%;
   grid-template-areas:
     'programs programs messages'
     'research sessions messages';

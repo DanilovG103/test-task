@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: 20px;
   height: 75%;
+  position: relative;
 `
 
 const IconWrapper = styled.div`
@@ -23,7 +24,8 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 30%;
+  left: 60%;
+  top: 0;
   padding: 10px 8px;
   width: 60px;
 `
@@ -32,16 +34,24 @@ const Checked = styled.p`
   color: ${Colors.white};
   font-weight: 500;
   font-size: 8px;
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
 `
 
 const ResearchBlock = styled.div`
   padding: 10px 25px 30px;
   background-color: ${Colors.gray[3]};
   border-radius: 10px;
-  width: 110%;
   align-self: center;
-  margin: -20px 0 -110px;
-  z-index: 1;
+  position: absolute;
+  top: 240px;
+  width: 100%;
+  @media (max-width: 400px) {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+  }
 `
 
 const Row = styled.div`
@@ -92,15 +102,53 @@ const Join = styled.p`
   color: ${Colors.purple[1]};
 `
 
+const ImageWrapper = styled.div`
+  position: relative;
+  @media (max-width: 400px) {
+    display: none;
+  }
+`
+
+const ImageMobileWrapper = styled.div`
+  display: none;
+  overflow: hidden;
+  border-radius: 10px;
+  @media (max-width: 400px) {
+    display: block;
+    position: relative;
+  }
+`
+
+const Layer = styled.div`
+  display: none;
+  background-color: ${Colors.purple[3]};
+  @media (max-width: 400px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 72px;
+    width: 72px;
+  }
+`
+
 export const Research = () => {
   return (
     <Wrapper>
-      <Image src={ResearchImage} />
-      <IconWrapper>
-        <CheckMark />
-        <Checked>Checked In</Checked>
-      </IconWrapper>
+      <ImageWrapper>
+        <Image src={ResearchImage} width={290} height={270} />
+        <IconWrapper>
+          <CheckMark />
+          <Checked>Checked In</Checked>
+        </IconWrapper>
+      </ImageWrapper>
       <ResearchBlock>
+        <ImageMobileWrapper>
+          <Image src={ResearchImage} height={72} width={72} />
+          <Layer>
+            <CheckMark />
+            <Checked>Checked In</Checked>
+          </Layer>
+        </ImageMobileWrapper>
         <Row>
           <Column>
             <ResearchInfo>UX Research - Week 3</ResearchInfo>
@@ -111,7 +159,7 @@ export const Research = () => {
             <DateMonth>APRIL</DateMonth>
           </Column>
         </Row>
-        <Row>
+        <Row style={{ alignItems: 'center' }}>
           <StatusRow>
             <ClockIcon />
             <Status>In Progress</Status>
