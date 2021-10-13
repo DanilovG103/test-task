@@ -79,7 +79,7 @@ const ImageWrapper = styled.div`
 
 export const Header = () => {
   const { width } = useWindowSize()
-  const ImageSize = width !== undefined && width > 400 ? 40 : 29
+  const ImageSize = width > 400 ? 40 : 29
 
   return (
     <HeaderBlock>
