@@ -37,20 +37,29 @@ const Label = styled.label`
   display: flex;
   padding: 5px;
   margin-bottom: 5px;
+  max-width: 180px;
+  @media (max-width: 400px) {
+    max-width: 150px;
+  }
 `
 
 const LabelText = styled.p`
   color: ${Colors.white};
   font-size: 10px;
   font-weight: 600;
+  @media (max-width: 400px) {
+    font-size: 8px;
+  }
 `
 
 const Info = styled.div<{ isMobile?: boolean }>`
   margin: 15px 25px;
   display: flex;
   flex-direction: column;
+  color: ${Colors.purple[0]};
   @media (max-width: 400px) {
     display: ${(props) => (props.isMobile ? 'none' : 'block')};
+    font-size: 12px;
   }
 `
 
