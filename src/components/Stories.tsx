@@ -35,9 +35,19 @@ const Name = styled.p`
   color: ${Colors.gray[7]};
 `
 
+const AvatarWrapper = styled.div`
+  display: inline-flex;
+  border: double 2px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, ${Colors.red[3]}, ${Colors.purple[1]});
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+`
+
 const Avatar = styled.img`
-  width: 46px;
-  height: 46px;
+  width: 43px;
+  height: 43px;
 `
 
 export const Stories = () => {
@@ -58,7 +68,9 @@ export const Stories = () => {
       </Block>
       {stories.map((item) => (
         <Block key={item.id}>
-          <Avatar src={item.avatar} alt={item.name} />
+          <AvatarWrapper>
+            <Avatar src={item.avatar} alt={item.name} />
+          </AvatarWrapper>
           <Name>{item.name}</Name>
         </Block>
       ))}
