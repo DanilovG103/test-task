@@ -3,7 +3,7 @@ export const Colors = {
   black: '#000000',
   purple: ['#333269', '#5855D6', '#0E1566'],
   lightPurple: '#C0BEFF',
-  red: ['#EC441E', '#EE2A4A', '#EE3637','#FF2C55'],
+  red: ['#EC441E', '#EE2A4A', '#EE3637', '#FF2C55'],
   gray: [
     '#DEDDFF', //0
     '#9592A6', //1
@@ -16,7 +16,7 @@ export const Colors = {
     '#E3E2E5', //8
   ],
   lightGray: '#F0EFF5',
-  green: ['#6FCF97','#4ED964'],
+  green: ['#6FCF97', '#4ED964'],
   darkBlue: '#0A043C',
-  dark: '#021442'
+  dark: '#021442',
 }

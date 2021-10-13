@@ -50,6 +50,16 @@ const MessagesWrapper = styled.div`
   }
 `
 
+const Circle = styled.div`
+  background-color: ${Colors.green[0]};
+  position: relative;
+  right: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+`
+
 export const Messages = () => {
   const messages = useSelector(selectMessages)
   const dispatch = useDispatch()
@@ -62,6 +72,7 @@ export const Messages = () => {
     <Wrapper>
       <Block>
         <Image src={User} width={29} height={29} />
+        <Circle />
         <BlockTitle>Messages</BlockTitle>
       </Block>
       <Line />
