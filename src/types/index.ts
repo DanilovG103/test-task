@@ -3,7 +3,7 @@ export interface SessionsProps {
   items: SessionsItems[]
 }
 
-type SessionsItems = {
+export type SessionsItems = {
   id: string
   class: string
   time: string
