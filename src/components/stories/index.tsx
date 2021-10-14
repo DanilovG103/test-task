@@ -57,7 +57,11 @@ const Avatar = styled.img`
   height: 43px;
 `
 
-export const Stories = () => {
+interface Props {
+  messagesLoading: boolean
+}
+
+export const Stories = ({ messagesLoading }: Props) => {
   const stories = useSelector(selectStories)
   const dispatch = useDispatch()
   const loading = stories.length < 1
@@ -74,7 +78,7 @@ export const Stories = () => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
-      {loading && <Loading />}
+      {loading && messagesLoading && <Loading />}
       {stories.map((item) => (
         <Block key={item.id}>
           <AvatarWrapper>

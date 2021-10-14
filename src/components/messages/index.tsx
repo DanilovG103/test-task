@@ -112,8 +112,7 @@ export const MessagesContent = () => {
         <Title>Messages</Title>
       </Block>
       <Line />
-      <Stories />
-      {loading && <Loading />}
+      <Stories messagesLoading={loading} />
       <MessagesWrapper>
         {messages.map((item) => (
           <MessageCard message={item} key={item.id} />
