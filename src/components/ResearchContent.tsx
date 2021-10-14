@@ -29,6 +29,7 @@ const Checked = styled.p`
   color: ${Colors.white};
   font-weight: 500;
   font-size: 8px;
+  margin-top: 5px;
   @media (max-width: 400px) {
     font-size: 10px;
   }

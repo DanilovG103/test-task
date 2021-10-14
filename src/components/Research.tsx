@@ -26,16 +26,18 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 60%;
+  left: 65%;
   top: 0;
   padding: 10px 8px;
-  width: 60px;
+  width: 57px;
+  height: 49px;
 `
 
 const Checked = styled.p`
   color: ${Colors.white};
   font-weight: 500;
   font-size: 8px;
+  margin-top: 5px;
   @media (max-width: 400px) {
     font-size: 10px;
   }
