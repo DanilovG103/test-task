@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-import { getMessages } from 'src/store/reducers/message'
+import { getMessages } from 'src/store/reducers/messages'
 import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
 import { selectMessages } from 'src/store/selectors/messages'
