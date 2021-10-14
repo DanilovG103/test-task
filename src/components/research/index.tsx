@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: 20px;
   position: relative;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     padding: 0;
   }
 `
@@ -38,14 +38,14 @@ const Checked = styled.p`
   font-weight: 500;
   font-size: 8px;
   margin-top: 5px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     font-size: 10px;
   }
 `
 
 const ImageWrapper = styled.div`
   position: relative;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: none;
   }
 `

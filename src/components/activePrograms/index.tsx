@@ -38,7 +38,7 @@ const Label = styled.label`
   padding: 5px;
   margin-bottom: 5px;
   max-width: 180px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     max-width: 150px;
   }
 `
@@ -47,7 +47,7 @@ const LabelText = styled.p`
   color: ${Colors.white};
   font-size: 10px;
   font-weight: 600;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     font-size: 8px;
   }
 `
@@ -57,13 +57,13 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   color: ${Colors.purple[0]};
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     font-size: 12px;
   }
 `
 
 const MarkBlock = styled(Info)`
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: none;
   }
 `

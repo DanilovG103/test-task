@@ -53,7 +53,7 @@ const Dots = styled.div`
   position: absolute;
   right: 15px;
   top: 25px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: flex;
   }
 `

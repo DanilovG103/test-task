@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   padding: 15px;
   align-items: center;
   position: relative;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     width: 350px;
   }
 `

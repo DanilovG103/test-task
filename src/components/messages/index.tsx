@@ -19,7 +19,7 @@ const Wrapper = styled.div<{ isExactlyPath: boolean }>`
   border-radius: 20px;
   margin-top: 10px;
   position: relative;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: ${(props) => (props.isExactlyPath ? 'block' : 'none')};
     margin: 0;
     border-radius: 0;
@@ -32,7 +32,7 @@ const Block = styled.div`
   align-items: center;
   padding: 15px;
   border-radius: 20px 20px 0 0;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     border-radius: 0;
     height: 60px;
   }
@@ -73,14 +73,14 @@ const Circle = styled.div`
 
 const ImageWrapper = styled.div`
   display: flex;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: none;
   }
 `
 
 const BackButtonWrapper = styled.div`
   display: none;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: block;
     margin-top: 3px;
     margin-right: 15px;

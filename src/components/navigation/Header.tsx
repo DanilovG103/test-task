@@ -14,7 +14,7 @@ const HeaderBlock = styled.header`
   align-items: center;
   justify-content: flex-end;
   padding: 15px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     height: 50px;
     padding: 15px 5px;
   }
@@ -32,7 +32,7 @@ const DotBlock = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: none;
   }
 `
@@ -55,7 +55,7 @@ const Description = styled(UserName)`
 
 const IconWrapper = styled.div`
   margin: 10px 25px 0;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     margin: 10px 0 0;
   }
 `
@@ -69,7 +69,7 @@ const Circle = styled.div`
   border-radius: 50%;
   right: 12px;
   top: 20px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: block;
   }
 `

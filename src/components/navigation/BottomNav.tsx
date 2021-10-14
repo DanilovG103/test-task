@@ -9,16 +9,15 @@ import { Colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
   display: none;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background-color: ${Colors.white};
   min-width: 100vw;
   height: 75px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 40px;
   }
 `
 

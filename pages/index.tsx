@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   grid-template-areas:
     'programs programs messages'
     'research sessions messages';
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     grid-template-areas:
       'programs'
       'research'

@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     'aside header header'
     'aside main main'
     'aside main main';
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     grid-template-columns: 0.1fr 1fr;
     grid-template-areas:
       'aside header'
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 const Main = styled.main<{ isMessagesPage: boolean }>`
   grid-area: main;
   padding: 35px;
-  @media (max-width: 400px) {
+  @media (max-width: 415px) {
     padding: ${(props) => (props.isMessagesPage ? '0' : '25px 15px')};
   }
 `
