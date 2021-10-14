@@ -61,7 +61,7 @@ const MessagesWrapper = styled.div`
     display: none;
   }
   @media (max-width: 400px) {
-    height: 700px;
+    height: 400px;
   }
 `
 
