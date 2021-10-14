@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   overflow-y: auto;
   height: 380px;
+  position: relative;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -134,6 +135,24 @@ const Container = styled.div`
   grid-row-gap: 2em;
 `
 
+const Dots = styled.div`
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  @media (max-width: 400px) {
+    display: flex;
+  }
+`
+
+const Dot = styled.i`
+  width: 3px;
+  height: 3px;
+  background-color: ${Colors.gray[1]};
+  border-radius: 50%;
+  margin: 0 2px;
+`
+
 export const Sessions = () => {
   const [page, setPage] = useState(1)
   const sessions = useSelector(selectSessions)
@@ -147,6 +166,11 @@ export const Sessions = () => {
   return (
     <Wrapper>
       <Title>Upcoming Sessions</Title>
+      <Dots>
+        <Dot />
+        <Dot />
+        <Dot />
+      </Dots>
       <Container>
         <Info>Date</Info>
         <Info>Class</Info>
