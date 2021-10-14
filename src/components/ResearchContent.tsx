@@ -99,6 +99,7 @@ const Status = styled.p`
 const Join = styled.p`
   font-weight: 600;
   color: ${Colors.purple[1]};
+  cursor: pointer;
   @media (max-width: 400px) {
     font-size: 12px;
   }

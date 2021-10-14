@@ -24,6 +24,7 @@ const AddCircle = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
 `
 
 const Block = styled.div`
@@ -40,6 +41,7 @@ const Name = styled.p`
 
 const AvatarWrapper = styled.div`
   display: inline-flex;
+  cursor: pointer;
   border: double 2px transparent;
   border-radius: 80px;
   background-image: linear-gradient(white, white),
