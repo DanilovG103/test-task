@@ -9,7 +9,7 @@ import { Colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
   display: none;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   background-color: ${Colors.white};
   min-width: 100vw;

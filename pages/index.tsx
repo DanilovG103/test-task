@@ -25,8 +25,7 @@ const Wrapper = styled.div`
     grid-template-areas:
       'programs'
       'research'
-      'sessions'
-      'messages';
+      'sessions';
     grid-template-columns: 1fr;
   }
 `
