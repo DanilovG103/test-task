@@ -17,9 +17,6 @@ const Wrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 400px) {
-    margin-bottom: 30px;
-  }
 `
 
 const Title = styled.p`

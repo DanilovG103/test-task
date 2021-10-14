@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   overflow-x: auto;
   padding: 15px;
   align-items: center;
+  @media (max-width: 400px) {
+    width: 350px;
+  }
 `
 
 const AddCircle = styled.div`

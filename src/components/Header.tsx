@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Colors } from 'src/theme/colors'
 import { MessagesIcon } from 'assets/icons/Message'
@@ -83,9 +84,11 @@ export const Header = () => {
 
   return (
     <HeaderBlock>
-      <IconWrapper>
-        <MessagesIcon />
-      </IconWrapper>
+      <Link href="/messages">
+        <IconWrapper>
+          <MessagesIcon />
+        </IconWrapper>
+      </Link>
       <ImageWrapper>
         <Image src={User} alt="User" width={ImageSize} height={ImageSize} />
         <Circle />

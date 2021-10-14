@@ -7,6 +7,7 @@ import { BottomNav } from './BottomNav'
 
 interface LayoutProps {
   title: string
+  isMessagesPage?: boolean
   children: ReactNode
 }
 
@@ -27,15 +28,19 @@ const Wrapper = styled.div`
   }
 `
 
-const Main = styled.main`
+const Main = styled.main<{ isMessagesPage: boolean }>`
   grid-area: main;
   padding: 35px;
   @media (max-width: 400px) {
-    padding: 25px 15px;
+    padding: ${(props) => (props.isMessagesPage ? '0' : '25px 15px')};
   }
 `
 
-export const Layout = ({ children, title }: LayoutProps) => {
+export const Layout = ({
+  children,
+  title,
+  isMessagesPage = false,
+}: LayoutProps) => {
   return (
     <>
       <Head>
@@ -45,7 +50,7 @@ export const Layout = ({ children, title }: LayoutProps) => {
       <Wrapper>
         <AsideMenu />
         <Header />
-        <Main>{children}</Main>
+        <Main isMessagesPage={isMessagesPage}>{children}</Main>
       </Wrapper>
       <BottomNav />
     </>

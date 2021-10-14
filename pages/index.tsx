@@ -6,7 +6,7 @@ import { Colors } from 'src/theme/colors'
 import { ActivePrograms } from 'src/components/ActivePrograms'
 import { Research } from 'src/components/Research'
 import { Sessions } from 'src/components/Sessions'
-import { Messages } from 'src/components/Messages'
+import { MessagesContent } from 'src/components/Messages'
 
 const Greeting = styled.p`
   color: ${Colors.purple[0]};
@@ -16,8 +16,7 @@ const Greeting = styled.p`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row-gap: 2em;
-  grid-column-gap: 2em;
+  gap: 2em 2em;
   grid-template-columns: 25% 42% 28%;
   grid-template-areas:
     'programs programs messages'
@@ -26,7 +25,8 @@ const Wrapper = styled.div`
     grid-template-areas:
       'programs'
       'research'
-      'sessions';
+      'sessions'
+      'messages';
     grid-template-columns: 1fr;
   }
 `
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <ActivePrograms />
         <Research />
         <Sessions />
-        <Messages />
+        <MessagesContent />
       </Wrapper>
     </Layout>
   )
