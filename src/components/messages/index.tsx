@@ -12,7 +12,6 @@ import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
 import { BackButton } from 'assets/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
-import { Loading } from '../Loading'
 
 const Wrapper = styled.div<{ isExactlyPath: boolean }>`
   grid-area: messages;
