@@ -52,14 +52,19 @@ const LabelText = styled.p`
   }
 `
 
-const Info = styled.div<{ isMobile?: boolean }>`
+const Info = styled.div`
   margin: 15px 25px;
   display: flex;
   flex-direction: column;
   color: ${Colors.purple[0]};
   @media (max-width: 400px) {
-    display: ${(props) => (props.isMobile ? 'none' : 'block')};
     font-size: 12px;
+  }
+`
+
+const MarkBlock = styled(Info)`
+  @media (max-width: 400px) {
+    display: none;
   }
 `
 
@@ -103,12 +108,12 @@ export const ActivePrograms = () => {
             <br />
             at Brookstone
           </Info>
-          <Info isMobile>
+          <MarkBlock>
             <AverageMark>A-</AverageMark>
             <Average>
               Academic <br /> average
             </Average>
-          </Info>
+          </MarkBlock>
         </Row>
       </View>
       <Line />
@@ -123,12 +128,12 @@ export const ActivePrograms = () => {
             <br />
             at Dursburg
           </Info>
-          <Info isMobile>
+          <MarkBlock>
             <AverageMark>--</AverageMark>
             <Average>
               Academic <br /> average
             </Average>
-          </Info>
+          </MarkBlock>
         </Row>
       </View>
     </Programs>
