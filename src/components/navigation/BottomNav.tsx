@@ -9,7 +9,7 @@ import { Colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
   display: none;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   background-color: ${Colors.white};
   min-width: 100vw;
@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 40px;
   }
 `
 

@@ -60,9 +60,6 @@ const MessagesWrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 400px) {
-    height: 350px;
-  }
 `
 
 const Circle = styled.div`
