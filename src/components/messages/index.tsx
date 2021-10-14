@@ -18,7 +18,7 @@ const Wrapper = styled.div<{ isExactlyPath: boolean }>`
   grid-area: messages;
   background-color: ${Colors.white};
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
   @media (max-width: 400px) {
     display: ${(props) => (props.isExactlyPath ? 'block' : 'none')};
@@ -61,7 +61,7 @@ const MessagesWrapper = styled.div`
     display: none;
   }
   @media (max-width: 400px) {
-    height: 400px;
+    height: 350px;
   }
 `
 
