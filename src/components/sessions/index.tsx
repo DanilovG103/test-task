@@ -66,6 +66,11 @@ const Dot = styled.i`
   margin: 0 2px;
 `
 
+const LoaderWrapper = styled.div`
+  position: absolute;
+  right: 25px;
+`
+
 export const Sessions = () => {
   const [page, setPage] = useState(1)
   const { sessions, loading } = useSelector(selectSessions)
@@ -91,8 +96,12 @@ export const Sessions = () => {
         {sessions.items.map((item) => (
           <SessionBlock item={item} />
         ))}
-        {loading && <Loading />}
       </Container>
+      {loading && (
+        <LoaderWrapper>
+          <Loading />
+        </LoaderWrapper>
+      )}
       {hasMore && (
         <AddSessions onClick={() => setPage((prev) => prev + 1)}>
           See All Sessions

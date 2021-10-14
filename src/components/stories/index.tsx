@@ -54,6 +54,11 @@ const Avatar = styled.img`
   height: 43px;
 `
 
+const LoaderWrapper = styled.div`
+  position: absolute;
+  left: 45%;
+`
+
 interface Props {
   messagesLoading: boolean
 }
@@ -74,7 +79,11 @@ export const Stories = ({ messagesLoading }: Props) => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
-      {loading && messagesLoading && <Loading />}
+      {loading && messagesLoading && (
+        <LoaderWrapper>
+          <Loading />
+        </LoaderWrapper>
+      )}
       {stories.map((item) => (
         <Block key={item.id}>
           <AvatarWrapper>
