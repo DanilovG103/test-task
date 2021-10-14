@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 import { MessagesIcon } from 'src/components/icons/Message'
-import User from 'assets/images/user.png'
+import User from 'public/images/user.png'
 import { useWindowSize } from 'src/hooks/useWindowSize'
 
 const HeaderBlock = styled.header`

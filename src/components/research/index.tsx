@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 import { CheckMark } from 'src/components/icons/CheckMark'
-import ResearchImage from 'assets/images/research.png'
+import ResearchImage from 'public/images/research.png'
 import { ResearchContent } from './ResearchContent'
 
 const Wrapper = styled.div`

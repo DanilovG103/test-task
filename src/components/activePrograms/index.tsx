@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 
-import University from 'assets/images/university.png'
-import Academy from 'assets/images/academy.png'
+import University from 'public/images/university.png'
+import Academy from 'public/images/academy.png'
 
 const Programs = styled.div`
   margin-top: 20px;

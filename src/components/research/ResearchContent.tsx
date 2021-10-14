@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { colors } from 'src/theme/colors'
 import { ClockIcon } from 'src/components/icons/Clock'
-import ResearchImage from 'assets/images/research.png'
+import ResearchImage from 'public/images/research.png'
 import { CheckMark } from 'src/components/icons/CheckMark'
 
 const Content = styled.div`
