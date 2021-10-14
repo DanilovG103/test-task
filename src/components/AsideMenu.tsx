@@ -1,6 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/dist/client/router'
-import Link from 'next/link'
 import styled from 'styled-components'
 
 import { CoursesIcon } from 'assets/icons/Courses'
@@ -80,7 +79,7 @@ const NavTitle = styled.a<Props>`
 `
 
 export const AsideMenu = () => {
-  const { pathname } = useRouter()
+  const { pathname, push } = useRouter()
 
   const isHomePage = pathname === '/'
   const isCoursesPage = pathname === '/courses'
@@ -92,20 +91,16 @@ export const AsideMenu = () => {
           <Logo />
           <Title>Univé</Title>
         </LogoWrapper>
-        <Link href="/">
-          <NavBlock>
-            <ActivePageLine isActive={isHomePage} />
-            <DashboardIcon isActive={isHomePage} />
-            <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
-          </NavBlock>
-        </Link>
-        <Link href="/courses">
-          <NavBlock>
-            <ActivePageLine isActive={isCoursesPage} />
-            <CoursesIcon isActive={isCoursesPage} />
-            <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
-          </NavBlock>
-        </Link>
+        <NavBlock onClick={() => push('/')}>
+          <ActivePageLine isActive={isHomePage} />
+          <DashboardIcon isActive={isHomePage} />
+          <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
+        </NavBlock>
+        <NavBlock onClick={() => push('/courses')}>
+          <ActivePageLine isActive={isCoursesPage} />
+          <CoursesIcon isActive={isCoursesPage} />
+          <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
+        </NavBlock>
       </Block>
     </Aside>
   )
