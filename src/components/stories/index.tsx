@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
-import { getStories } from 'src/store/reducer'
+import { getStories } from 'src/store/reducers/stories'
 import { colors } from 'src/theme/colors'
-import { selectStories } from 'src/store/selectors/selectStories'
+import { selectStories } from 'src/store/selectors/stories'
 import { PlusIcon } from 'src/components/icons/Plus'
 import { Loading } from '../Loading'
 
@@ -59,9 +59,8 @@ interface Props {
 }
 
 export const Stories = ({ messagesLoading }: Props) => {
-  const stories = useSelector(selectStories)
+  const { loading, stories } = useSelector(selectStories)
   const dispatch = useDispatch()
-  const loading = stories.length < 1
 
   useEffect(() => {
     dispatch(getStories())

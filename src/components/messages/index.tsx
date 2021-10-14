@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { getMessages } from 'src/store/reducer'
+import { getMessages } from 'src/store/reducers/message'
 import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
-import { selectMessages } from 'src/store/selectors/selectMessages'
+import { selectMessages } from 'src/store/selectors/messages'
 
 import User from 'public/images/User.png'
 import { MessageCard } from './MessageCard'
@@ -88,9 +88,8 @@ const BackButtonWrapper = styled.div`
 `
 
 export const MessagesContent = () => {
-  const messages = useSelector(selectMessages)
+  const { messages, loading } = useSelector(selectMessages)
   const dispatch = useDispatch()
-  const loading = messages.length < 1
   const { back, pathname } = useRouter()
   const shouldHideMessages = pathname === '/messages'
 

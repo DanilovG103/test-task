@@ -1,4 +1,4 @@
-export interface SessionsProps {
+interface SessionsProps {
   count: number
   items: SessionsItems[]
 }
@@ -21,6 +21,24 @@ export interface MessagesProps {
   time: string
 }
 
+export interface Message {
+  loading: boolean
+  messages: MessagesProps[]
+  error?: string
+}
+
+export interface Stories {
+  loading: boolean
+  stories: StoriesProps[]
+  error?: string
+}
+
+export interface Sessions {
+  loading: boolean
+  sessions: SessionsProps
+  error?: string
+}
+
 export interface StoriesProps {
   id: string
   name: string
@@ -28,11 +46,7 @@ export interface StoriesProps {
 }
 
 export interface AppState {
-  sessions: SessionsProps
-  messages: MessagesProps[]
-  stories: StoriesProps[]
-}
-
-export type State = {
-  data: AppState
+  sessions: Sessions
+  messages: Message
+  stories: Stories
 }

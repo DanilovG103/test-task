@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { getSessions } from 'src/store/reducer'
-import { selectSessions } from 'src/store/selectors/selectSessions'
+import { getSessions } from 'src/store/reducers/sessions'
+import { selectSessions } from 'src/store/selectors/sessions'
 import { colors } from 'src/theme/colors'
 import { SessionBlock } from './SessionBlock'
 import { Loading } from '../Loading'
@@ -68,8 +68,7 @@ const Dot = styled.i`
 
 export const Sessions = () => {
   const [page, setPage] = useState(1)
-  const sessions = useSelector(selectSessions)
-  const loading = sessions.items.length < 1
+  const { sessions, loading } = useSelector(selectSessions)
   const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
@@ -89,10 +88,10 @@ export const Sessions = () => {
         <Info>Date</Info>
         <Info>Class</Info>
         <Info>Time</Info>
-        {loading && <Loading />}
         {sessions.items.map((item) => (
           <SessionBlock item={item} />
         ))}
+        {loading && <Loading />}
       </Container>
       {hasMore && (
         <AddSessions onClick={() => setPage((prev) => prev + 1)}>
