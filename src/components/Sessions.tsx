@@ -118,7 +118,7 @@ const Container = styled.div`
 export const Sessions = () => {
   const [page, setPage] = useState(1)
   const sessions = useSelector(selectSessions)
-  const limit = sessions.items.length < sessions.count
+  const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -149,7 +149,7 @@ export const Sessions = () => {
           </Row>
         ))}
       </Container>
-      {limit && (
+      {hasMore && (
         <AddSessions onClick={() => setPage((prev) => prev + 1)}>
           See All Sessions
         </AddSessions>
