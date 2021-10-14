@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Last Deploy link
+## Deploy link
 
-https://test-task-f44rcb2po-danilovg103.vercel.app/
+https://test-task-lovat.vercel.app/
 
 ## Getting Started
 
