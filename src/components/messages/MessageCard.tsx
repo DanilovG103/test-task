@@ -34,6 +34,7 @@ const Name = styled.p<StyleProps>`
 const Content = styled(Name)`
   color: ${(props) => (props.unread ? colors.purple[0] : colors.gray[1])};
   font-weight: ${(props) => (props.unread ? 600 : 400)};
+  text-overflow: ellipsis;
 `
 
 const Avatar = styled.img`
@@ -47,7 +48,7 @@ const StatusBlock = styled(ContentBlock)`
   width: 65px;
 `
 
-const Circle = styled.div<StyleProps>`
+const MessagesCount = styled.div`
   width: 25px;
   height: 25px;
   padding: 8px;
@@ -58,7 +59,6 @@ const Circle = styled.div<StyleProps>`
   color: ${colors.white};
   border-radius: 50%;
   font-weight: 500;
-  opacity: ${(props) => (props.unread ? 1 : 0)};
 `
 
 const Time = styled.p`
@@ -66,22 +66,21 @@ const Time = styled.p`
   color: ${colors.gray[7]};
 `
 
+const randomNumber = Math.ceil(Math.random() * 10)
+
 export const MessageCard = ({ message }: Props) => {
   const [unread, setUnread] = useState(Math.random() > 0.5)
-  const cropMessage = (message: string) => `${message.slice(0, 50)}...`
-
-  const randomNumber = Math.ceil(Math.random() * 10)
 
   return (
     <Container onClick={() => setUnread(false)}>
       <Avatar src={message.avatar} alt={message.name} />
       <ContentBlock>
         <Name unread={unread}>{message.name}</Name>
-        <Content unread={unread}>{cropMessage(message.content)}</Content>
+        <Content unread={unread}>{message.content}</Content>
       </ContentBlock>
       <StatusBlock>
         <Time>{message.time}</Time>
-        <Circle unread={unread}>{randomNumber}</Circle>
+        <MessagesCount>{randomNumber}</MessagesCount>
       </StatusBlock>
     </Container>
   )

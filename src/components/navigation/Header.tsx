@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
-import { MessagesIcon } from 'assets/icons/Message'
-import User from 'assets/images/User.png'
+import { MessagesIcon } from 'src/components/icons/Message'
+import User from 'assets/images/user.png'
 import { useWindowSize } from 'src/hooks/useWindowSize'
 
 const HeaderBlock = styled.header`

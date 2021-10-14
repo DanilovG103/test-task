@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getStories } from 'src/store/reducer'
 import { colors } from 'src/theme/colors'
 import { selectStories } from 'src/store/selectors/selectStories'
-import { PlusIcon } from 'assets/icons/Plus'
+import { PlusIcon } from 'src/components/icons/Plus'
 import { Loading } from '../Loading'
 
 const Wrapper = styled.div`

@@ -2,9 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/dist/client/router'
 import styled from 'styled-components'
 
-import { CoursesIcon } from 'assets/icons/Courses'
-import { DashboardIcon } from 'assets/icons/Dashboard'
-import { Logo } from 'assets/icons/Logo'
+import { CoursesIcon } from 'src/components/icons/Courses'
+import { DashboardIcon } from 'src/components/icons/Dashboard'
+import { Logo } from 'src/components/icons/Logo'
 
 import { colors } from 'src/theme/colors'
 

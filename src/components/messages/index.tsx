@@ -10,7 +10,7 @@ import { selectMessages } from 'src/store/selectors/selectMessages'
 
 import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
-import { BackButton } from 'assets/icons/BackButton'
+import { BackButton } from 'src/components/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
 
 const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
