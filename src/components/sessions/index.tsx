@@ -67,15 +67,15 @@ const Dot = styled.i`
 `
 
 export const Sessions = () => {
-  const [limit, setLimit] = useState(3)
+  const [page, setPage] = useState(1)
   const sessions = useSelector(selectSessions)
   const loading = sessions.items.length < 1
   const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getSessions(limit))
-  }, [dispatch, limit])
+    dispatch(getSessions(page))
+  }, [dispatch, page])
 
   return (
     <Wrapper>
@@ -95,7 +95,7 @@ export const Sessions = () => {
         ))}
       </Container>
       {hasMore && (
-        <AddSessions onClick={() => setLimit((prev) => prev + 3)}>
+        <AddSessions onClick={() => setPage((prev) => prev + 1)}>
           See All Sessions
         </AddSessions>
       )}

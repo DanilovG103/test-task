@@ -12,9 +12,9 @@ const initialState: AppState = {
 
 export const getSessions = createAsyncThunk(
   'sessions/getSessions',
-  async (limit: number) => {
+  async (page: number) => {
     const response = await fetch(
-      `https://6162c0b8c483380017300717.mockapi.io/api/v1/sessions?p=1&l=${limit}`,
+      `https://6162c0b8c483380017300717.mockapi.io/api/v1/sessions?p=${page}&l=3`,
     )
     return await response.json()
   },
@@ -44,7 +44,7 @@ const dataSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getSessions.fulfilled, (state, { payload }) => {
       state.sessions.count = payload.count
-      state.sessions.items = payload.items
+      state.sessions.items = state.sessions.items.concat(payload.items)
     })
 
     builder.addCase(getMessages.fulfilled, (state, { payload }) => {
