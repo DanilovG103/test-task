@@ -5,12 +5,14 @@ import { getStories } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
 import { selectStories } from 'src/store/selectors/selectStories'
 import { PlusIcon } from 'assets/icons/Plus'
+import { Loading } from './Loading'
 
 const Wrapper = styled.div`
   display: flex;
   overflow-x: auto;
   padding: 15px;
   align-items: center;
+  position: relative;
   @media (max-width: 400px) {
     width: 350px;
   }
@@ -58,6 +60,7 @@ const Avatar = styled.img`
 export const Stories = () => {
   const stories = useSelector(selectStories)
   const dispatch = useDispatch()
+  const loading = stories.length < 1
 
   useEffect(() => {
     dispatch(getStories())
@@ -71,6 +74,7 @@ export const Stories = () => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
+      {loading && <Loading />}
       {stories.map((item) => (
         <Block key={item.id}>
           <AvatarWrapper>

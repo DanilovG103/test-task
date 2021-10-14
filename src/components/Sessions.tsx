@@ -5,6 +5,7 @@ import { getSessions } from 'src/store/reducer'
 import { selectSessions } from 'src/store/selectors/selectSessions'
 import { Colors } from 'src/theme/colors'
 import { SessionBlock } from './SessionBlock'
+import { Loading } from './Loading'
 
 const Wrapper = styled.div`
   grid-area: sessions;
@@ -68,6 +69,7 @@ const Dot = styled.i`
 export const Sessions = () => {
   const [page, setPage] = useState(3)
   const sessions = useSelector(selectSessions)
+  const loading = sessions.items.length < 1
   const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
@@ -87,6 +89,7 @@ export const Sessions = () => {
         <Info>Date</Info>
         <Info>Class</Info>
         <Info>Time</Info>
+        {loading && <Loading />}
         {sessions.items.map((item) => (
           <SessionBlock item={item} />
         ))}

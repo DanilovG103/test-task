@@ -12,12 +12,14 @@ import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
 import { BackButton } from 'assets/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
+import { Loading } from './Loading'
 
 const Wrapper = styled.div<{ isExactlyPath: boolean }>`
   grid-area: messages;
   background-color: ${Colors.white};
   border-radius: 20px;
   margin-top: 20px;
+  position: relative;
   @media (max-width: 400px) {
     display: ${(props) => (props.isExactlyPath ? 'block' : 'none')};
     margin: 0;
@@ -89,6 +91,7 @@ const BackButtonWrapper = styled.div`
 export const MessagesContent = () => {
   const messages = useSelector(selectMessages)
   const dispatch = useDispatch()
+  const loading = messages.length < 1
   const { back, pathname } = useRouter()
   const isMessagesPage = pathname === '/messages'
 
@@ -110,6 +113,7 @@ export const MessagesContent = () => {
       </Block>
       <Line />
       <Stories />
+      {loading && <Loading />}
       <MessagesWrapper>
         {messages.map((item) => (
           <MessageCard message={item} key={item.id} />
