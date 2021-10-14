@@ -33,6 +33,7 @@ const Main = styled.main<{ isMessagesPage: boolean }>`
   padding: 35px;
   @media (max-width: 400px) {
     padding: ${(props) => (props.isMessagesPage ? '0' : '25px 15px')};
+    margin-bottom: ${(props) => (props.isMessagesPage ? '90px' : '0')};
   }
 `
 
