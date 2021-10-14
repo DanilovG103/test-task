@@ -8,7 +8,7 @@ export const useColor = (width: number) => {
   })
 
   useEffect(() => {
-    width > 400
+    width > 415
       ? setColor({ active: Colors.white, inactive: Colors.lightPurple })
       : setColor({ active: Colors.purple[1], inactive: Colors.gray[1] })
   }, [width])
