@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { CheckMark } from 'assets/icons/CheckMark'
 import ResearchImage from 'assets/images/research.png'
 import { ResearchContent } from './ResearchContent'
 
 const Wrapper = styled.div`
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   grid-area: research;
   border-radius: 20px;
   display: flex;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `
 
 const IconWrapper = styled.div`
-  background-color: ${Colors.purple[1]};
+  background-color: ${colors.purple[1]};
   border-radius: 0 0 10px 10px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ const IconWrapper = styled.div`
 `
 
 const Checked = styled.p`
-  color: ${Colors.white};
+  color: ${colors.white};
   font-weight: 500;
   font-size: 8px;
   margin-top: 5px;

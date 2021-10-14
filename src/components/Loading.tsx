@@ -1,6 +1,6 @@
 import React from 'react'
 import Loader from 'react-loader-spinner'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import styled from 'styled-components'
 
 const LoadingWrapper = styled.div`
@@ -12,7 +12,7 @@ const LoadingWrapper = styled.div`
 export const Loading = () => {
   return (
     <LoadingWrapper>
-      <Loader type="TailSpin" width={40} height={40} color={Colors.purple[1]} />
+      <Loader type="TailSpin" width={40} height={40} color={colors.purple[1]} />
     </LoadingWrapper>
   )
 }

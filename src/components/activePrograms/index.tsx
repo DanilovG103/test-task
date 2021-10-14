@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 
 import University from 'assets/images/university.png'
 import Academy from 'assets/images/academy.png'
@@ -9,7 +9,7 @@ import Academy from 'assets/images/academy.png'
 const Programs = styled.div`
   margin-top: 20px;
   padding: 15px 25px;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@ const Programs = styled.div`
 `
 
 const Title = styled.p`
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   font-size: 16px;
   font-weight: 500;
 `
@@ -31,7 +31,7 @@ const View = styled.div`
 `
 
 const Label = styled.label`
-  background-color: ${Colors.purple[1]};
+  background-color: ${colors.purple[1]};
   border-radius: 35px;
   justify-content: center;
   display: flex;
@@ -44,7 +44,7 @@ const Label = styled.label`
 `
 
 const LabelText = styled.p`
-  color: ${Colors.white};
+  color: ${colors.white};
   font-size: 10px;
   font-weight: 600;
   @media (max-width: 415px) {
@@ -56,7 +56,7 @@ const Info = styled.div`
   margin: 15px 25px;
   display: flex;
   flex-direction: column;
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   @media (max-width: 415px) {
     font-size: 12px;
   }
@@ -69,7 +69,7 @@ const MarkBlock = styled(Info)`
 `
 
 const Line = styled.div`
-  background-color: ${Colors.gray[2]};
+  background-color: ${colors.gray[2]};
   height: 1px;
 `
 
@@ -84,12 +84,12 @@ const AverageMark = styled.p`
   font-family: MuseoModerno;
   font-weight: 700;
   text-align: center;
-  color: ${Colors.gray[1]};
+  color: ${colors.gray[1]};
 `
 
 const Average = styled.p`
   font-size: 10px;
-  color: ${Colors.gray[1]};
+  color: ${colors.gray[1]};
   text-align: center;
 `
 

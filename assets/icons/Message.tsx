@@ -1,16 +1,16 @@
 import React from 'react'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 
 export const MessagesIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg width={50} height={50} fill="none" {...props}>
       <g filter="url(#prefix__filter0_d)">
-        <circle cx={23} cy={22} r={15} fill={Colors.purple[1]} />
+        <circle cx={23} cy={22} r={15} fill={colors.purple[1]} />
         <path
           d="M28.302 16.698a7.5 7.5 0 00-12.21 8.25c.072.149.096.316.068.48L15.5 28.6a.748.748 0 00.75.9h.15l3.21-.645a.946.946 0 01.48.067 7.5 7.5 0 008.25-12.21l-.038-.014zM20 22.75a.75.75 0 110-1.5.75.75 0 010 1.5zm3 0a.75.75 0 110-1.5.75.75 0 010 1.5zm3 0a.75.75 0 110-1.5.75.75 0 010 1.5z"
-          fill={Colors.white}
+          fill={colors.white}
         />
-        <circle cx={29.5} cy={16.5} r={3.5} fill={Colors.green[0]} />
+        <circle cx={29.5} cy={16.5} r={3.5} fill={colors.green[0]} />
       </g>
       <defs>
         <filter

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 
 export const useColor = (width: number) => {
   const [color, setColor] = useState<Record<string, string>>({
@@ -9,8 +9,8 @@ export const useColor = (width: number) => {
 
   useEffect(() => {
     width > 415
-      ? setColor({ active: Colors.white, inactive: Colors.lightPurple })
-      : setColor({ active: Colors.purple[1], inactive: Colors.gray[1] })
+      ? setColor({ active: colors.white, inactive: colors.lightPurple })
+      : setColor({ active: colors.purple[1], inactive: colors.gray[1] })
   }, [width])
 
   return color

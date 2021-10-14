@@ -1,5 +1,5 @@
-import React from "react"
-import { Colors } from "src/theme/colors"
+import React from 'react'
+import { colors } from 'src/theme/colors'
 
 export const PlusIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
@@ -8,11 +8,10 @@ export const PlusIcon = (props: React.SVGProps<SVGSVGElement>) => {
       height={16}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="M8 1v14M1 8h14"
-        stroke={Colors.gray[7]}
+        stroke={colors.gray[7]}
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -20,4 +19,3 @@ export const PlusIcon = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   )
 }
-

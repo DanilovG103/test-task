@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { getSessions } from 'src/store/reducer'
 import { selectSessions } from 'src/store/selectors/selectSessions'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { SessionBlock } from './SessionBlock'
 import { Loading } from '../Loading'
 
 const Wrapper = styled.div`
   grid-area: sessions;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   padding: 15px 20px;
   border-radius: 20px;
   display: flex;
@@ -24,18 +24,18 @@ const Wrapper = styled.div`
 
 const Title = styled.p`
   font-weight: 500;
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   font-size: 16px;
 `
 
 const Info = styled.p`
-  color: ${Colors.gray[5]};
+  color: ${colors.gray[5]};
   margin-top: 20px;
 `
 
 const AddSessions = styled.a`
   cursor: pointer;
-  color: ${Colors.purple[1]};
+  color: ${colors.purple[1]};
   font-weight: 600;
   align-self: flex-end;
   margin-top: 35px;
@@ -61,7 +61,7 @@ const Dots = styled.div`
 const Dot = styled.i`
   width: 3px;
   height: 3px;
-  background-color: ${Colors.gray[1]};
+  background-color: ${colors.gray[1]};
   border-radius: 50%;
   margin: 0 2px;
 `

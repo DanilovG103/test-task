@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import { getMessages } from 'src/store/reducer'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
 import { selectMessages } from 'src/store/selectors/selectMessages'
 
@@ -13,21 +13,21 @@ import { MessageCard } from './MessageCard'
 import { BackButton } from 'assets/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
 
-const Wrapper = styled.div<{ isExactlyPath: boolean }>`
+const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   grid-area: messages;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   border-radius: 20px;
   margin-top: 10px;
   position: relative;
   @media (max-width: 415px) {
-    display: ${(props) => (props.isExactlyPath ? 'block' : 'none')};
+    display: ${(props) => (props.shouldHideMessages ? 'block' : 'none')};
     margin: 0;
     border-radius: 0;
   }
 `
 
 const Block = styled.div`
-  background-color: ${Colors.gray[3]};
+  background-color: ${colors.gray[3]};
   display: flex;
   align-items: center;
   padding: 15px;
@@ -39,7 +39,7 @@ const Block = styled.div`
 `
 
 const Title = styled.p`
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   font-size: 16px;
   font-weight: 500;
 `
@@ -47,11 +47,11 @@ const Title = styled.p`
 const Line = styled.div`
   width: 100%;
   height: 1px;
-  background: ${Colors.gray[2]};
+  background: ${colors.gray[2]};
 `
 
 const MessagesWrapper = styled.div`
-  height: 540px;
+  max-height: 560px;
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
@@ -62,7 +62,7 @@ const MessagesWrapper = styled.div`
 `
 
 const Circle = styled.div`
-  background-color: ${Colors.green[0]};
+  background-color: ${colors.green[0]};
   position: relative;
   right: 8px;
   top: 20px;
@@ -92,14 +92,14 @@ export const MessagesContent = () => {
   const dispatch = useDispatch()
   const loading = messages.length < 1
   const { back, pathname } = useRouter()
-  const isMessagesPage = pathname === '/messages'
+  const shouldHideMessages = pathname === '/messages'
 
   useEffect(() => {
     dispatch(getMessages())
   }, [dispatch])
 
   return (
-    <Wrapper isExactlyPath={isMessagesPage}>
+    <Wrapper shouldHideMessages={shouldHideMessages}>
       <Block>
         <ImageWrapper>
           <Image src={User} width={29} height={29} />

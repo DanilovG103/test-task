@@ -1,4 +1,4 @@
-export const Colors = {
+export const colors = {
   white: '#ffffff',
   black: '#000000',
   purple: ['#333269', '#5855D6', '#0E1566', 'rgba(88,85,214,0.7)'],

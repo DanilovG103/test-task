@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { MessagesProps } from 'src/types'
 
 interface Props {
@@ -13,7 +13,7 @@ interface StyleProps {
 
 const Container = styled.div`
   display: flex;
-  border-top: 1px solid ${Colors.gray[2]};
+  border-top: 1px solid ${colors.gray[2]};
   padding: 20px 5px;
   cursor: pointer;
 `
@@ -26,13 +26,13 @@ const ContentBlock = styled.div`
 `
 
 const Name = styled.p<StyleProps>`
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   font-size: 13px;
   font-weight: ${(props) => (props.unread ? 600 : 500)};
 `
 
 const Content = styled(Name)`
-  color: ${(props) => (props.unread ? Colors.purple[0] : Colors.gray[1])};
+  color: ${(props) => (props.unread ? colors.purple[0] : colors.gray[1])};
   font-weight: ${(props) => (props.unread ? 600 : 400)};
 `
 
@@ -54,8 +54,8 @@ const Circle = styled.div<StyleProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${Colors.purple[1]};
-  color: ${Colors.white};
+  background-color: ${colors.purple[1]};
+  color: ${colors.white};
   border-radius: 50%;
   font-weight: 500;
   opacity: ${(props) => (props.unread ? 1 : 0)};
@@ -63,7 +63,7 @@ const Circle = styled.div<StyleProps>`
 
 const Time = styled.p`
   font-size: 10px;
-  color: ${Colors.gray[7]};
+  color: ${colors.gray[7]};
 `
 
 export const MessageCard = ({ message }: Props) => {

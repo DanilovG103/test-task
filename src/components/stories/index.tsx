@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStories } from 'src/store/reducer'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { selectStories } from 'src/store/selectors/selectStories'
 import { PlusIcon } from 'assets/icons/Plus'
 import { Loading } from '../Loading'
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const AddCircle = styled.div`
   width: 46px;
   height: 46px;
-  background-color: ${Colors.gray[8]};
+  background-color: ${colors.gray[8]};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ const Block = styled.div`
 
 const Name = styled.p`
   font-size: 12px;
-  color: ${Colors.gray[7]};
+  color: ${colors.gray[7]};
 `
 
 const AvatarWrapper = styled.div`
@@ -44,7 +44,7 @@ const AvatarWrapper = styled.div`
   border: double 2px transparent;
   border-radius: 80px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top, ${Colors.red[3]}, ${Colors.purple[1]});
+    radial-gradient(circle at top, ${colors.red[3]}, ${colors.purple[1]});
   background-origin: border-box;
   background-clip: content-box, border-box;
 `

@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { MessagesIcon } from 'assets/icons/Message'
 import User from 'assets/images/User.png'
 import { useWindowSize } from 'src/hooks/useWindowSize'
 
 const HeaderBlock = styled.header`
   grid-area: header;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -23,7 +23,7 @@ const HeaderBlock = styled.header`
 const Dot = styled.i`
   width: 3px;
   height: 3px;
-  background-color: ${Colors.gray[1]};
+  background-color: ${colors.gray[1]};
   border-radius: 50%;
   margin: 1px 0;
 `
@@ -45,7 +45,7 @@ const UserBlock = styled(DotBlock)`
 const UserName = styled.p`
   font-size: 16px;
   font-weight: 700;
-  color: ${Colors.darkBlue};
+  color: ${colors.darkBlue};
 `
 
 const Description = styled(UserName)`
@@ -62,7 +62,7 @@ const IconWrapper = styled.div`
 
 const Circle = styled.div`
   display: none;
-  background-color: ${Colors.green[0]};
+  background-color: ${colors.green[0]};
   position: relative;
   width: 10px;
   height: 10px;

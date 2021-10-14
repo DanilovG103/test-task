@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { SessionsItems } from 'src/types'
 
 const Row = styled.div`
@@ -19,14 +19,14 @@ const DateBlock = styled.div`
 
 const DayOfWeek = styled.p`
   font-size: 10px;
-  color: ${Colors.purple[1]};
+  color: ${colors.purple[1]};
   @media (max-width: 415px) {
     font-size: 9px;
   }
 `
 
 const Day = styled.p`
-  color: ${Colors.gray[4]};
+  color: ${colors.gray[4]};
   font-size: 18px;
   font-weight: 700;
   @media (max-width: 415px) {
@@ -57,7 +57,7 @@ const ClassBlock = styled.div`
 `
 
 const Class = styled.p`
-  color: ${Colors.dark};
+  color: ${colors.dark};
   font-size: 12px;
   font-weight: 500;
   @media (max-width: 415px) {
@@ -66,7 +66,7 @@ const Class = styled.p`
 `
 
 const Description = styled.p`
-  color: ${Colors.gray[4]};
+  color: ${colors.gray[4]};
   font-size: 11px;
   @media (max-width: 415px) {
     font-size: 9px;
@@ -75,7 +75,7 @@ const Description = styled.p`
 
 const TimeBlock = styled.div`
   border-radius: 11px;
-  background: ${Colors.gray[6]};
+  background: ${colors.gray[6]};
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -84,7 +84,7 @@ const TimeBlock = styled.div`
 `
 
 const Time = styled.p`
-  color: ${Colors.purple[0]};
+  color: ${colors.purple[0]};
   font-size: 9px;
   font-weight: 600;
   @media (max-width: 415px) {

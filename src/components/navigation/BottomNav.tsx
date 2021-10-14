@@ -5,13 +5,13 @@ import { DashboardIcon } from 'assets/icons/Dashboard'
 import { Notifications } from 'assets/icons/Notifications'
 import { Setting } from 'assets/icons/Settings'
 import { useRouter } from 'next/dist/client/router'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
   display: none;
   position: fixed;
   bottom: 0;
-  background-color: ${Colors.white};
+  background-color: ${colors.white};
   min-width: 100vw;
   height: 75px;
   @media (max-width: 415px) {
@@ -31,14 +31,14 @@ const NavBlock = styled.div`
 
 const NavTitle = styled.a<{ isActive: boolean }>`
   font-size: 12px;
-  color: ${(props) => (props.isActive ? Colors.purple[1] : Colors.gray[1])};
+  color: ${(props) => (props.isActive ? colors.purple[1] : colors.gray[1])};
   font-weight: ${(props) => (props.isActive ? 600 : 400)};
 `
 
 const Line = styled.div<{ isActive: boolean }>`
   width: 47px;
   height: 5px;
-  background-color: ${Colors.purple[1]};
+  background-color: ${colors.purple[1]};
   border-radius: 5px;
   display: ${(props) => (props.isActive ? 'block' : 'none')};
   position: absolute;

@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 import { ClockIcon } from 'assets/icons/Clock'
 import ResearchImage from 'assets/images/research.png'
 import { CheckMark } from 'assets/icons/CheckMark'
 
 const Content = styled.div`
   padding: 10px 20px 30px;
-  background-color: ${Colors.gray[3]};
+  background-color: ${colors.gray[3]};
   border-radius: 10px;
   align-self: center;
   position: absolute;
@@ -26,7 +26,7 @@ const Content = styled.div`
 `
 
 const Checked = styled.p`
-  color: ${Colors.white};
+  color: ${colors.white};
   font-weight: 500;
   font-size: 8px;
   margin-top: 5px;
@@ -51,14 +51,14 @@ const Column = styled(Row)`
 const ResearchInfo = styled.p`
   font-weight: 500;
   font-size: 20px;
-  color: ${Colors.purple[2]};
+  color: ${colors.purple[2]};
   @media (max-width: 415px) {
     font-size: 16px;
   }
 `
 
 const Description = styled.p`
-  color: ${Colors.gray[1]};
+  color: ${colors.gray[1]};
   font-size: 11px;
   @media (max-width: 415px) {
     font-size: 10px;
@@ -66,7 +66,7 @@ const Description = styled.p`
 `
 
 const DateNumber = styled.p`
-  color: ${Colors.gray[4]};
+  color: ${colors.gray[4]};
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -90,7 +90,7 @@ const StatusRow = styled.div`
 
 const Status = styled.p`
   font-style: italic;
-  color: ${Colors.red[3]};
+  color: ${colors.red[3]};
   @media (max-width: 415px) {
     font-size: 12px;
   }
@@ -98,7 +98,7 @@ const Status = styled.p`
 
 const Join = styled.p`
   font-weight: 600;
-  color: ${Colors.purple[1]};
+  color: ${colors.purple[1]};
   cursor: pointer;
   @media (max-width: 415px) {
     font-size: 12px;
@@ -119,7 +119,7 @@ const ImageWrapper = styled.div`
 
 const Layer = styled.div`
   display: none;
-  background-color: ${Colors.purple[3]};
+  background-color: ${colors.purple[3]};
   @media (max-width: 415px) {
     display: flex;
     flex-direction: column;

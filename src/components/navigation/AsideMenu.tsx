@@ -6,7 +6,7 @@ import { CoursesIcon } from 'assets/icons/Courses'
 import { DashboardIcon } from 'assets/icons/Dashboard'
 import { Logo } from 'assets/icons/Logo'
 
-import { Colors } from 'src/theme/colors'
+import { colors } from 'src/theme/colors'
 
 interface Props {
   isActive: boolean
@@ -14,7 +14,7 @@ interface Props {
 
 const Aside = styled.aside`
   padding: 30px 60px;
-  background: ${Colors.purple[0]};
+  background: ${colors.purple[0]};
   grid-area: aside;
   min-height: 100vh;
   @media (max-width: 415px) {
@@ -53,7 +53,7 @@ const LogoWrapper = styled.div`
 const Title = styled.p`
   font-family: MuseoModerno;
   font-weight: 600;
-  color: ${Colors.gray[0]};
+  color: ${colors.gray[0]};
   font-size: 30px;
   margin-left: 10px;
   @media (max-width: 415px) {
@@ -62,7 +62,7 @@ const Title = styled.p`
 `
 
 const ActivePageLine = styled.div<Props>`
-  background-color: ${Colors.red[2]};
+  background-color: ${colors.red[2]};
   height: 34px;
   width: 5px;
   border-radius: 5px;
@@ -72,7 +72,7 @@ const ActivePageLine = styled.div<Props>`
 `
 
 const NavTitle = styled.a<Props>`
-  color: ${(props) => (props.isActive ? Colors.white : Colors.lightPurple)};
+  color: ${(props) => (props.isActive ? colors.white : colors.lightPurple)};
   font-weight: ${(props) => (props.isActive ? 700 : 400)};
   font-size: ${(props) => (props.isActive ? 18 : 15)}px;
   margin-left: 10px;
