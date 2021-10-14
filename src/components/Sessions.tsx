@@ -66,7 +66,7 @@ const Dot = styled.i`
 `
 
 export const Sessions = () => {
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(3)
   const sessions = useSelector(selectSessions)
   const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
@@ -92,7 +92,7 @@ export const Sessions = () => {
         ))}
       </Container>
       {hasMore && (
-        <AddSessions onClick={() => setPage((prev) => prev + 1)}>
+        <AddSessions onClick={() => setPage((prev) => prev + 3)}>
           See All Sessions
         </AddSessions>
       )}
