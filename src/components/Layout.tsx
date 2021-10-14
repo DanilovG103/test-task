@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
-import { AsideMenu } from 'src/components/AsideMenu'
-import { Header } from 'src/components/Header'
-import { BottomNav } from './BottomNav'
+import { AsideMenu } from 'src/components/navigation/AsideMenu'
+import { Header } from 'src/components/navigation/Header'
+import { BottomNav } from 'src/components/navigation/BottomNav'
 
 interface LayoutProps {
   title: string

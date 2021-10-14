@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import { Layout } from 'src/components/Layout'
 import { Colors } from 'src/theme/colors'
-import { ActivePrograms } from 'src/components/ActivePrograms'
-import { Research } from 'src/components/Research'
-import { Sessions } from 'src/components/Sessions'
-import { MessagesContent } from 'src/components/Messages'
+import { ActivePrograms } from 'src/components/activePrograms'
+import { Research } from 'src/components/research'
+import { Sessions } from 'src/components/sessions'
+import { MessagesContent } from 'src/components/messages'
 
 const Greeting = styled.p`
   color: ${Colors.purple[0]};

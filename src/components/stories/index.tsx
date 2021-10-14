@@ -5,7 +5,7 @@ import { getStories } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
 import { selectStories } from 'src/store/selectors/selectStories'
 import { PlusIcon } from 'assets/icons/Plus'
-import { Loading } from './Loading'
+import { Loading } from '../Loading'
 
 const Wrapper = styled.div`
   display: flex;

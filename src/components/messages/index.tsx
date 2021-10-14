@@ -5,14 +5,14 @@ import Image from 'next/image'
 
 import { getMessages } from 'src/store/reducer'
 import { Colors } from 'src/theme/colors'
-import { Stories } from 'src/components/Stories'
+import { Stories } from 'src/components/stories'
 import { selectMessages } from 'src/store/selectors/selectMessages'
 
 import User from 'assets/images/User.png'
 import { MessageCard } from './MessageCard'
 import { BackButton } from 'assets/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
-import { Loading } from './Loading'
+import { Loading } from '../Loading'
 
 const Wrapper = styled.div<{ isExactlyPath: boolean }>`
   grid-area: messages;

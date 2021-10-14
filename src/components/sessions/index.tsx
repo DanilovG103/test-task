@@ -5,7 +5,7 @@ import { getSessions } from 'src/store/reducer'
 import { selectSessions } from 'src/store/selectors/selectSessions'
 import { Colors } from 'src/theme/colors'
 import { SessionBlock } from './SessionBlock'
-import { Loading } from './Loading'
+import { Loading } from '../Loading'
 
 const Wrapper = styled.div`
   grid-area: sessions;
