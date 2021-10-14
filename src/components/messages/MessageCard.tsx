@@ -16,13 +16,13 @@ const Container = styled.div`
   border-top: 1px solid ${colors.gray[2]};
   padding: 20px 5px;
   cursor: pointer;
+  align-items: center;
 `
 
 const ContentBlock = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-left: 10px;
+  justify-content: space-between;
+  margin: 5px 0 5px 10px;
 `
 
 const Name = styled.p<StyleProps>`
@@ -42,11 +42,7 @@ const Avatar = styled.img`
   height: 55px;
 `
 
-const StatusBlock = styled(ContentBlock)`
-  margin-left: 0;
-  align-items: flex-end;
-  width: 65px;
-`
+const StatusBlock = styled(ContentBlock)``
 
 const MessagesCount = styled.div`
   width: 25px;
@@ -67,6 +63,7 @@ const Time = styled.p`
 `
 
 const randomNumber = Math.ceil(Math.random() * 10)
+const cropMessage = (message: string) => `${message.slice(0, 55)}...`
 
 export const MessageCard = ({ message }: Props) => {
   const [unread, setUnread] = useState(Math.random() > 0.5)
@@ -74,14 +71,16 @@ export const MessageCard = ({ message }: Props) => {
   return (
     <Container onClick={() => setUnread(false)}>
       <Avatar src={message.avatar} alt={message.name} />
-      <ContentBlock>
-        <Name unread={unread}>{message.name}</Name>
-        <Content unread={unread}>{message.content}</Content>
-      </ContentBlock>
-      <StatusBlock>
-        <Time>{message.time}</Time>
-        <MessagesCount>{randomNumber}</MessagesCount>
-      </StatusBlock>
+      <div>
+        <ContentBlock>
+          <Name unread={unread}>{message.name}</Name>
+          <Time>{message.time}</Time>
+        </ContentBlock>
+        <StatusBlock>
+          <Content unread={unread}>{cropMessage(message.content)}</Content>
+          {unread && <MessagesCount>{randomNumber}</MessagesCount>}
+        </StatusBlock>
+      </div>
     </Container>
   )
 }

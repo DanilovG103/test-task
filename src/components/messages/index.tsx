@@ -8,7 +8,7 @@ import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
 import { selectMessages } from 'src/store/selectors/messages'
 
-import User from 'public/images/User.png'
+import User from 'public/images/user.png'
 import { MessageCard } from './MessageCard'
 import { BackButton } from 'src/components/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
