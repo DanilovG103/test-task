@@ -20,6 +20,9 @@ const Wrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+  @media (max-width: 400px) {
+    margin-bottom: 20px;
+  }
 `
 
 const Title = styled.p`
