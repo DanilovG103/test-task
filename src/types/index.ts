@@ -45,8 +45,22 @@ export interface StoriesProps {
   avatar: string
 }
 
+interface UserProps {
+  id: string
+  name: string
+  surname: string
+  avatar: string
+}
+
+export interface User {
+  loading: boolean
+  error?: string
+  user: UserProps[] | undefined
+}
+
 export interface AppState {
   sessions: Sessions
   messages: Message
   stories: Stories
+  user: User
 }

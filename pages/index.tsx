@@ -7,6 +7,8 @@ import { ActivePrograms } from 'src/components/activePrograms'
 import { Research } from 'src/components/research'
 import { Sessions } from 'src/components/sessions'
 import { MessagesContent } from 'src/components/messages'
+import { useSelector } from 'react-redux'
+import { selectUser } from 'src/store/selectors/user'
 
 const Greeting = styled.p`
   color: ${colors.purple[0]};
@@ -32,9 +34,11 @@ const Wrapper = styled.div`
 `
 
 const Home: NextPage = () => {
+  const { user } = useSelector(selectUser)
+  const userName = !user ? undefined : user[0].name
   return (
     <Layout title="Home">
-      <Greeting>Hello, Mia!</Greeting>
+      <Greeting>Hello, {userName}!</Greeting>
       <Wrapper>
         <ActivePrograms />
         <Research />

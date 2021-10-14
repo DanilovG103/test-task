@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 import { MessagesIcon } from 'src/components/icons/Message'
-import User from 'public/images/user.png'
-import { useWindowSize } from 'src/hooks/useWindowSize'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectUser } from 'src/store/selectors/user'
+import { getUser } from 'src/store/reducers/user'
 
 const HeaderBlock = styled.header`
   grid-area: header;
@@ -60,6 +60,15 @@ const IconWrapper = styled.div`
   }
 `
 
+const Avatar = styled.img`
+  width: 40px;
+  height: 40px;
+  @media (max-width: 415px) {
+    width: 29px;
+    height: 29px;
+  }
+`
+
 const Circle = styled.div`
   display: none;
   background-color: ${colors.green[0]};
@@ -79,8 +88,15 @@ const ImageWrapper = styled.div`
 `
 
 export const Header = () => {
-  const { width } = useWindowSize()
-  const ImageSize = width > 400 ? 40 : 29
+  const { user } = useSelector(selectUser)
+  const dispatch = useDispatch()
+  const userAvatar = !user ? undefined : user[0].avatar
+  const userName = !user ? undefined : user[0].name
+  const userSurname = !user ? undefined : user[0].surname
+
+  useEffect(() => {
+    dispatch(getUser())
+  }, [dispatch])
 
   return (
     <HeaderBlock>
@@ -90,11 +106,11 @@ export const Header = () => {
         </IconWrapper>
       </Link>
       <ImageWrapper>
-        <Image src={User} alt="User" width={ImageSize} height={ImageSize} />
+        <Avatar src={userAvatar} alt={userName} />
         <Circle />
       </ImageWrapper>
       <UserBlock>
-        <UserName>Mia V</UserName>
+        <UserName>{userName + ' ' + userSurname}</UserName>
         <Description>Student</Description>
       </UserBlock>
       <DotBlock>

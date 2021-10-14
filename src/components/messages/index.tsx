@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import Image from 'next/image'
 
 import { getMessages } from 'src/store/reducers/message'
 import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
 import { selectMessages } from 'src/store/selectors/messages'
 
-import User from 'public/images/user.png'
 import { MessageCard } from './MessageCard'
 import { BackButton } from 'src/components/icons/BackButton'
 import { useRouter } from 'next/dist/client/router'
+import { selectUser } from 'src/store/selectors/user'
 
 const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   grid-area: messages;
@@ -87,11 +86,19 @@ const BackButtonWrapper = styled.div`
   }
 `
 
+const Avatar = styled.img`
+  width: 29px;
+  height: 29px;
+`
+
 export const MessagesContent = () => {
   const { messages, loading } = useSelector(selectMessages)
+  const { user } = useSelector(selectUser)
   const dispatch = useDispatch()
   const { back, pathname } = useRouter()
   const shouldHideMessages = pathname === '/messages'
+  const userAvatar = !user ? undefined : user[0].avatar
+  const userName = !user ? undefined : user[0].name
 
   useEffect(() => {
     dispatch(getMessages())
@@ -101,7 +108,7 @@ export const MessagesContent = () => {
     <Wrapper shouldHideMessages={shouldHideMessages}>
       <Block>
         <ImageWrapper>
-          <Image src={User} width={29} height={29} />
+          <Avatar src={userAvatar} alt={userName} />
           <Circle />
         </ImageWrapper>
         <BackButtonWrapper onClick={back}>
