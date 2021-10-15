@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 
-import University from 'public/images/university.png'
-import Academy from 'public/images/academy.png'
+import university from 'public/images/university.png'
+import academy from 'public/images/academy.png'
 
 const Programs = styled.div`
   margin-top: 20px;
@@ -94,11 +94,13 @@ const Average = styled.p`
 `
 
 export const ActivePrograms = () => {
+  const imageSize = 68
+
   return (
     <Programs>
       <Title>Active Programs</Title>
       <View>
-        <Image src={University} width={68} height={68} />
+        <Image src={university} width={imageSize} height={imageSize} />
         <Row>
           <Info>
             <Label>
@@ -118,7 +120,7 @@ export const ActivePrograms = () => {
       </View>
       <Line />
       <View>
-        <Image src={Academy} width={68} height={68} />
+        <Image src={academy} width={imageSize} height={imageSize} />
         <Row>
           <Info>
             <Label>

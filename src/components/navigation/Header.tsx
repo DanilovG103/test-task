@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { colors } from 'src/theme/colors'
-import { MessagesIcon } from 'src/components/icons/Message'
 import { useDispatch, useSelector } from 'react-redux'
+import { MessagesIcon } from 'src/components/icons/Message'
+import { colors } from 'src/theme/colors'
 import { selectUser } from 'src/store/selectors/user'
 import { getUser } from 'src/store/reducers/user'
 

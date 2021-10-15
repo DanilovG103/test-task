@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { colors } from 'src/theme/colors'
 import { CheckMark } from 'src/components/icons/CheckMark'
-import ResearchImage from 'public/images/research.png'
+import researchImage from 'public/images/research.png'
 import { ResearchContent } from './ResearchContent'
 
 const Wrapper = styled.div`
@@ -54,7 +54,7 @@ export const Research = () => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <Image src={ResearchImage} width={290} height={270} />
+        <Image src={researchImage} width={290} height={270} />
         <IconWrapper>
           <CheckMark />
           <Checked>Checked In</Checked>

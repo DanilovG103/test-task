@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
-import { getStories } from 'src/store/reducers/stories'
-import { colors } from 'src/theme/colors'
-import { selectStories } from 'src/store/selectors/stories'
+import { Loading } from 'src/components/Loading'
 import { PlusIcon } from 'src/components/icons/Plus'
-import { Loading } from '../Loading'
-import { StoriesBlock } from './StoriesBlock'
+import { getStories } from 'src/store/reducers/stories'
+import { selectStories } from 'src/store/selectors/stories'
+import { colors } from 'src/theme/colors'
+import { StoriesBlock } from 'src/components/stories/StoriesBlock'
 
 const Wrapper = styled.div`
   display: flex;

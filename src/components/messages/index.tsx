@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
-import { getMessages } from 'src/store/reducers/messages'
-import { colors } from 'src/theme/colors'
 import { Stories } from 'src/components/stories'
-import { selectMessages } from 'src/store/selectors/messages'
-
-import { MessageCard } from './MessageCard'
+import { MessageCard } from 'src/components/messages/MessageCard'
 import { BackButton } from 'src/components/icons/BackButton'
-import { useRouter } from 'next/dist/client/router'
+import { getMessages } from 'src/store/reducers/messages'
+import { selectMessages } from 'src/store/selectors/messages'
 import { selectUser } from 'src/store/selectors/user'
+import { colors } from 'src/theme/colors'
 
 const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   grid-area: messages;
@@ -110,8 +109,6 @@ export const MessagesContent = () => {
   useEffect(() => {
     dispatch(getMessages())
   }, [dispatch])
-
-  console.log(messages)
 
   return (
     <Wrapper shouldHideMessages={shouldHideMessages}>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
+import { SessionBlock } from 'src/components/sessions/SessionBlock'
+import { Loading } from 'src/components/Loading'
 import { getSessions } from 'src/store/reducers/sessions'
 import { selectSessions } from 'src/store/selectors/sessions'
 import { colors } from 'src/theme/colors'
-import { SessionBlock } from './SessionBlock'
-import { Loading } from '../Loading'
 
 const Wrapper = styled.div`
   grid-area: sessions;

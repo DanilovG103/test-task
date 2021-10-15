@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { colors } from 'src/theme/colors'
 import { ClockIcon } from 'src/components/icons/Clock'
-import ResearchImage from 'public/images/research.png'
 import { CheckMark } from 'src/components/icons/CheckMark'
+import researchImage from 'public/images/research.png'
 
 const Content = styled.div`
   padding: 10px 20px 30px;
@@ -133,10 +133,11 @@ const Layer = styled.div`
 `
 
 export const ResearchContent = () => {
+  const imageSize = 72
   return (
     <Content>
       <ImageWrapper>
-        <Image src={ResearchImage} height={72} width={72} />
+        <Image src={researchImage} height={imageSize} width={imageSize} />
         <Layer>
           <CheckMark />
           <Checked>Checked In</Checked>

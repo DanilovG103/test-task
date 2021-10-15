@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
 import { colors } from 'src/theme/colors'
 import { Message } from 'src/types'
 import { setRead } from 'src/store/reducers/messages'
-import { useDispatch } from 'react-redux'
 
 interface Props {
   message: Message

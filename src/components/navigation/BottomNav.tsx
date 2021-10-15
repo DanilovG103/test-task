@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 import { CoursesIcon } from 'src/components/icons/Courses'
 import { DashboardIcon } from 'src/components/icons/Dashboard'
 import { Notifications } from 'src/components/icons/Notifications'
 import { Setting } from 'src/components/icons/Settings'
-import { useRouter } from 'next/dist/client/router'
 import { colors } from 'src/theme/colors'
 
 const Wrapper = styled.div`
