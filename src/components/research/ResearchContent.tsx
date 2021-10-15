@@ -133,7 +133,9 @@ const Layer = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  width: 100%;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 
 export const ResearchContent = () => {
