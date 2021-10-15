@@ -102,7 +102,7 @@ export const MessagesContent = () => {
   const { user } = useSelector(selectUser)
   const dispatch = useDispatch()
   const { back, pathname } = useRouter()
-  const hasMessages = messages.length !== 0
+  const hasMessages = messages.items.length !== 0
   const shouldHideMessages = pathname === '/messages'
   const userAvatar = !user ? undefined : user[0].avatar
   const userName = !user ? undefined : user[0].name
@@ -127,7 +127,9 @@ export const MessagesContent = () => {
       <Stories messagesLoading={loading} />
       <MessagesWrapper>
         {hasMessages ? (
-          messages.map((item) => <MessageCard message={item} key={item.id} />)
+          messages.items.map((item) => (
+            <MessageCard message={item} key={item.id} />
+          ))
         ) : (
           <NoMessages>No messages</NoMessages>
         )}

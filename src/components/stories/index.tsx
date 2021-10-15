@@ -57,7 +57,7 @@ interface Props {
 export const Stories = ({ messagesLoading }: Props) => {
   const { loading, stories } = useSelector(selectStories)
   const dispatch = useDispatch()
-  const hasStories = stories.length !== 0
+  const hasStories = stories.items.length !== 0
 
   useEffect(() => {
     dispatch(getStories())
@@ -77,7 +77,7 @@ export const Stories = ({ messagesLoading }: Props) => {
         </LoaderWrapper>
       )}
       {hasStories ? (
-        stories.map((item) => <StoriesBlock item={item} key={item.id} />)
+        stories.items.map((item) => <StoriesBlock item={item} key={item.id} />)
       ) : (
         <NoStories>No stories</NoStories>
       )}

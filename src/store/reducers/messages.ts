@@ -4,7 +4,9 @@ import { Message } from 'src/types'
 
 const initialState: Message = {
   loading: false,
-  messages: [],
+  messages: {
+    items: [],
+  },
   error: '',
 }
 
@@ -26,7 +28,7 @@ const messageSlice = createSlice({
     })
 
     builder.addCase(getMessages.fulfilled, (state, { payload }) => {
-      state.messages = payload
+      state.messages.items = payload
       state.loading = false
     })
 

@@ -4,7 +4,9 @@ import { Stories } from 'src/types'
 
 const initialState: Stories = {
   loading: false,
-  stories: [],
+  stories: {
+    items: [],
+  },
   error: '',
 }
 

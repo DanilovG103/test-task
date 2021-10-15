@@ -23,13 +23,17 @@ export interface MessagesProps {
 
 export interface Message {
   loading: boolean
-  messages: MessagesProps[]
+  messages: {
+    items: MessagesProps[]
+  }
   error?: string
 }
 
 export interface Stories {
   loading: boolean
-  stories: StoriesProps[]
+  stories: {
+    items: StoriesProps[]
+  }
   error?: string
 }
 
