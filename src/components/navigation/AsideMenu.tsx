@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Aside = styled.aside`
-  padding: 30px 60px;
+  padding: 30px;
   background: ${colors.purple[0]};
   grid-area: aside;
   min-height: 100vh;
@@ -28,6 +28,7 @@ const Aside = styled.aside`
 const Block = styled.div`
   display: flex;
   flex-direction: column;
+  position: fixed;
 `
 
 const NavBlock = styled.div`
@@ -67,7 +68,7 @@ const ActivePageLine = styled.div<Props>`
   width: 5px;
   border-radius: 5px;
   position: absolute;
-  left: 0;
+  left: -30px;
   display: ${(props) => (props.isActive ? 'block' : 'none')};
 `
 
