@@ -15,10 +15,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 380px;
+  max-height: 370px;
   position: relative;
   ::-webkit-scrollbar {
     display: none;
+  }
+  @media (max-width: 768px) {
+    height: 100%;
   }
 `
 

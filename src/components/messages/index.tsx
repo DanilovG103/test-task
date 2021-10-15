@@ -19,7 +19,8 @@ const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   position: relative;
   @media (max-width: 768px) {
     display: ${(props) => (props.shouldHideMessages ? 'block' : 'none')};
-    margin-bottom: 80px;
+    margin: 0;
+    margin-bottom: 60px;
     border-radius: 0;
   }
 `
@@ -56,6 +57,9 @@ const MessagesWrapper = styled.div`
   overflow-y: auto;
   ::-webkit-scrollbar {
     display: none;
+  }
+  @media (max-width: 768px) {
+    max-height: none;
   }
 `
 
