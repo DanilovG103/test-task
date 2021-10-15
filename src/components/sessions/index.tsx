@@ -68,7 +68,7 @@ const Dot = styled.i`
 
 const LoaderWrapper = styled.div`
   position: absolute;
-  right: 25px;
+  left: 45%;
 `
 
 export const Sessions = () => {
