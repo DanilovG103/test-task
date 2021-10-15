@@ -25,7 +25,7 @@ const storiesSlice = createSlice({
     })
 
     builder.addCase(getStories.fulfilled, (state, { payload }) => {
-      state.stories = payload
+      state.stories.items = payload
       state.loading = false
     })
 
