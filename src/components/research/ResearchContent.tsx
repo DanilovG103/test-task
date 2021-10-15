@@ -132,6 +132,10 @@ const Layer = styled.div`
   }
 `
 
+const ContentWrapper = styled.div`
+  width: 100%;
+`
+
 export const ResearchContent = () => {
   const imageSize = 72
   return (
@@ -143,7 +147,7 @@ export const ResearchContent = () => {
           <Checked>Checked In</Checked>
         </Layer>
       </ImageWrapper>
-      <Column>
+      <ContentWrapper>
         <Row>
           <Column>
             <ResearchInfo>UX Research - Week 3</ResearchInfo>
@@ -161,7 +165,7 @@ export const ResearchContent = () => {
           </StatusRow>
           <Join>Join Now</Join>
         </Row>
-      </Column>
+      </ContentWrapper>
     </Content>
   )
 }
