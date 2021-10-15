@@ -21,6 +21,7 @@ const Aside = styled.aside`
   min-width: 250px;
   @media (max-width: 768px) {
     min-height: 0;
+    min-width: 50px;
     width: 50px;
     height: 50px;
     padding: 5px;

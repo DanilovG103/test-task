@@ -4,8 +4,10 @@ import { colors } from 'src/theme/colors'
 
 const Wrapper = styled.div<{ isActive: boolean }>`
   color: ${({ isActive }) => (isActive ? colors.white : colors.lightPurple)};
+  margin-top: 6px;
   @media (max-width: 768px) {
     color: ${({ isActive }) => (isActive ? colors.purple[1] : colors.gray[1])};
+    margin: 0;
   }
 `
 interface Props {
