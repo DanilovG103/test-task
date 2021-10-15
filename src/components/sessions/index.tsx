@@ -101,7 +101,9 @@ export const Sessions = () => {
         <Info>Class</Info>
         <Info>Time</Info>
         {hasSessions ? (
-          sessions.items.map((item) => <SessionBlock item={item} />)
+          sessions.items.map((item) => (
+            <SessionBlock item={item} key={item.id} />
+          ))
         ) : (
           <NoSessions>No sessions</NoSessions>
         )}
