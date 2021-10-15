@@ -1,4 +1,4 @@
-interface SessionsProps {
+interface SessionData {
   count: number
   items: Session[]
 }
@@ -43,7 +43,7 @@ export interface Stories {
 
 export interface Sessions {
   loading: boolean
-  sessions: SessionsProps
+  sessions: SessionData
   error?: string
 }
 
