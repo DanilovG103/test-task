@@ -1,14 +1,9 @@
-import React from "react"
-import { colors } from "src/theme/colors"
+import React from 'react'
+import { colors } from 'src/theme/colors'
 
 export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      width={28}
-      height={37}
-      fill="none"
-      {...props}
-    >
+    <svg width={28} height={37} fill="none" {...props}>
       <path
         d="M23.144 7.245a4.075 4.075 0 00-4.069 4.067v10.13a5.462 5.462 0 01-3.355 5.127 5.471 5.471 0 01-7.581-5.127v-10.13a4.065 4.065 0 00-4.07-4.066A4.07 4.07 0 000 11.312v11.203a13.59 13.59 0 003.985 9.615 13.61 13.61 0 0014.829 2.947 13.608 13.608 0 007.364-7.359 13.589 13.589 0 001.036-5.203V11.312a4.07 4.07 0 00-4.07-4.067zm2.29 15.269c0 3.134-1.247 6.14-3.465 8.357a11.831 11.831 0 01-16.725 0 11.814 11.814 0 01-3.464-8.357V11.312a2.287 2.287 0 012.29-2.267 2.29 2.29 0 012.288 2.267v10.13a7.24 7.24 0 002.123 5.122 7.25 7.25 0 0012.374-5.122v-10.13a2.286 2.286 0 012.29-2.287 2.29 2.29 0 012.288 2.287v11.202z"
         fill="url(#prefix__paint0_linear)"
@@ -24,8 +19,7 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
           y1={21.679}
           x2={27.214}
           y2={21.679}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor={colors.red[0]} />
           <stop offset={1} stopColor={colors.red[1]} />
         </linearGradient>
@@ -35,8 +29,7 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
           y1={10.968}
           x2={18.312}
           y2={10.968}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor={colors.red[0]} />
           <stop offset={1} stopColor={colors.red[1]} />
         </linearGradient>
@@ -44,4 +37,3 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   )
 }
-
