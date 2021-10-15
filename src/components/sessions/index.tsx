@@ -71,9 +71,16 @@ const LoaderWrapper = styled.div`
   left: 45%;
 `
 
+const NoSessions = styled.p`
+  color: ${colors.darkBlue};
+  font-size: 16px;
+  text-align: center;
+`
+
 export const Sessions = () => {
   const [page, setPage] = useState(1)
-  const { sessions, loading } = useSelector(selectSessions)
+  const { sessions, loading, error } = useSelector(selectSessions)
+  const hasSessions = sessions.items.length !== 0
   const hasMore = sessions.items.length < sessions.count
   const dispatch = useDispatch()
 
@@ -93,9 +100,12 @@ export const Sessions = () => {
         <Info>Date</Info>
         <Info>Class</Info>
         <Info>Time</Info>
-        {sessions.items.map((item) => (
-          <SessionBlock item={item} />
-        ))}
+        {hasSessions ? (
+          sessions.items.map((item) => <SessionBlock item={item} />)
+        ) : (
+          <NoSessions>No sessions</NoSessions>
+        )}
+        {error}
       </Container>
       {loading && (
         <LoaderWrapper>

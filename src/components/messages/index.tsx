@@ -91,11 +91,18 @@ const Avatar = styled.img`
   height: 29px;
 `
 
+const NoMessages = styled.p`
+  font-size: 16px;
+  color: ${colors.darkBlue};
+  text-align: center;
+`
+
 export const MessagesContent = () => {
-  const { messages, loading } = useSelector(selectMessages)
+  const { messages, loading, error } = useSelector(selectMessages)
   const { user } = useSelector(selectUser)
   const dispatch = useDispatch()
   const { back, pathname } = useRouter()
+  const hasMessages = messages.length !== 0
   const shouldHideMessages = pathname === '/messages'
   const userAvatar = !user ? undefined : user[0].avatar
   const userName = !user ? undefined : user[0].name
@@ -119,9 +126,12 @@ export const MessagesContent = () => {
       <Line />
       <Stories messagesLoading={loading} />
       <MessagesWrapper>
-        {messages.map((item) => (
-          <MessageCard message={item} key={item.id} />
-        ))}
+        {hasMessages ? (
+          messages.map((item) => <MessageCard message={item} key={item.id} />)
+        ) : (
+          <NoMessages>No messages</NoMessages>
+        )}
+        {error}
       </MessagesWrapper>
     </Wrapper>
   )

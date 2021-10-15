@@ -6,6 +6,7 @@ import { colors } from 'src/theme/colors'
 import { selectStories } from 'src/store/selectors/stories'
 import { PlusIcon } from 'src/components/icons/Plus'
 import { Loading } from '../Loading'
+import { StoriesBlock } from './StoriesBlock'
 
 const Wrapper = styled.div`
   display: flex;
@@ -38,25 +39,15 @@ const Name = styled.p`
   color: ${colors.gray[7]};
 `
 
-const AvatarWrapper = styled.div`
-  display: inline-flex;
-  cursor: pointer;
-  border: double 2px transparent;
-  border-radius: 80px;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at top, ${colors.red[3]}, ${colors.purple[1]});
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-`
-
-const Avatar = styled.img`
-  width: 43px;
-  height: 43px;
-`
-
 const LoaderWrapper = styled.div`
   position: absolute;
   left: 45%;
+`
+
+const NoStories = styled.p`
+  font-size: 16px;
+  color: ${colors.darkBlue};
+  text-align: center;
 `
 
 interface Props {
@@ -66,6 +57,7 @@ interface Props {
 export const Stories = ({ messagesLoading }: Props) => {
   const { loading, stories } = useSelector(selectStories)
   const dispatch = useDispatch()
+  const hasStories = stories.length !== 0
 
   useEffect(() => {
     dispatch(getStories())
@@ -84,14 +76,11 @@ export const Stories = ({ messagesLoading }: Props) => {
           <Loading />
         </LoaderWrapper>
       )}
-      {stories.map((item) => (
-        <Block key={item.id}>
-          <AvatarWrapper>
-            <Avatar src={item.avatar} alt={item.name} />
-          </AvatarWrapper>
-          <Name>{item.name}</Name>
-        </Block>
-      ))}
+      {hasStories ? (
+        stories.map((item) => <StoriesBlock item={item} key={item.id} />)
+      ) : (
+        <NoStories>No stories</NoStories>
+      )}
     </Wrapper>
   )
 }
