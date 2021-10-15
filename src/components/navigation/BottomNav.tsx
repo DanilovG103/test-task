@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   background-color: ${colors.white};
   min-width: 100vw;
   height: 75px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: flex;
     justify-content: space-around;
     align-items: center;

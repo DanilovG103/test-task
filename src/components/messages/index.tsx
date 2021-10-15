@@ -17,7 +17,7 @@ const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   border-radius: 20px;
   margin-top: 10px;
   position: relative;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: ${(props) => (props.shouldHideMessages ? 'block' : 'none')};
     margin-bottom: 80px;
     border-radius: 0;
@@ -30,7 +30,7 @@ const Block = styled.div`
   align-items: center;
   padding: 15px;
   border-radius: 20px 20px 0 0;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     border-radius: 0;
     height: 60px;
   }
@@ -71,14 +71,14 @@ const Circle = styled.div`
 
 const ImageWrapper = styled.div`
   display: flex;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `
 
 const BackButtonWrapper = styled.div`
   display: none;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: block;
     margin-top: 3px;
     margin-right: 15px;

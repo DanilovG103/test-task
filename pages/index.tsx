@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   grid-template-areas:
     'programs programs messages'
     'research sessions messages';
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     grid-template-areas:
       'programs'
       'research'
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   padding: 35px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     padding: 25px 15px;
   }
 `

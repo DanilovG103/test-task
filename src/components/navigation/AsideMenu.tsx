@@ -14,11 +14,12 @@ interface Props {
 }
 
 const Aside = styled.aside`
-  padding: 30px;
+  padding: 30px 60px;
   background: ${colors.purple[0]};
   grid-area: aside;
   min-height: 100vh;
-  @media (max-width: 415px) {
+  min-width: 250px;
+  @media (max-width: 768px) {
     min-height: 0;
     width: 50px;
     height: 50px;
@@ -30,7 +31,7 @@ const Block = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     position: relative;
   }
 `
@@ -40,7 +41,7 @@ const NavBlock = styled.div`
   display: flex;
   margin: 20px 0;
   cursor: pointer;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `
@@ -49,7 +50,7 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 40px 0;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     margin: 0;
     align-self: center;
   }
@@ -61,7 +62,7 @@ const Title = styled.p`
   color: ${colors.gray[0]};
   font-size: 30px;
   margin-left: 10px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `
@@ -72,7 +73,7 @@ const ActivePageLine = styled.div`
   width: 5px;
   border-radius: 5px;
   position: absolute;
-  left: -30px;
+  left: -60px;
 `
 
 const NavTitle = styled.a<Props>`

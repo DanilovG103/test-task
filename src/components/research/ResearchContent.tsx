@@ -14,7 +14,7 @@ const Content = styled.div`
   position: absolute;
   top: 240px;
   width: 100%;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: flex;
     background: transparent;
     align-items: center;
@@ -30,7 +30,7 @@ const Checked = styled.p`
   font-weight: 500;
   font-size: 8px;
   margin-top: 5px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 10px;
   }
 `
@@ -39,7 +39,7 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     margin: 4px 6px;
   }
 `
@@ -52,7 +52,7 @@ const ResearchInfo = styled.p`
   font-weight: 500;
   font-size: 20px;
   color: ${colors.purple[2]};
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 `
@@ -60,7 +60,7 @@ const ResearchInfo = styled.p`
 const Description = styled.p`
   color: ${colors.gray[1]};
   font-size: 11px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 10px;
   }
 `
@@ -70,7 +70,7 @@ const DateNumber = styled.p`
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 `
@@ -78,7 +78,7 @@ const DateNumber = styled.p`
 const DateMonth = styled(DateNumber)`
   font-size: 10px;
   font-weight: 600;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 9px;
   }
 `
@@ -91,7 +91,7 @@ const StatusRow = styled.div`
 const Status = styled.p`
   font-style: italic;
   color: ${colors.red[3]};
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 12px;
   }
 `
@@ -100,7 +100,7 @@ const Join = styled.p`
   font-weight: 600;
   color: ${colors.purple[1]};
   cursor: pointer;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 12px;
   }
 `
@@ -109,7 +109,7 @@ const ImageWrapper = styled.div`
   display: none;
   overflow: hidden;
   border-radius: 10px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: block;
     position: relative;
     height: 72px;
@@ -120,7 +120,7 @@ const ImageWrapper = styled.div`
 const Layer = styled.div`
   display: none;
   background-color: ${colors.purple[3]};
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;

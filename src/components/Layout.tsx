@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     'aside header header'
     'aside main main'
     'aside main main';
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     grid-template-columns: 0.1fr 1fr;
     grid-template-areas:
       'aside header'

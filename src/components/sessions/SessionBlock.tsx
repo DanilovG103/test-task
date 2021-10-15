@@ -20,7 +20,7 @@ const DateBlock = styled.div`
 const DayOfWeek = styled.p`
   font-size: 10px;
   color: ${colors.purple[1]};
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 9px;
   }
 `
@@ -29,7 +29,7 @@ const Day = styled.p`
   color: ${colors.gray[4]};
   font-size: 18px;
   font-weight: 700;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 `
@@ -38,7 +38,7 @@ const Month = styled(Day)`
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 9px;
   }
 `
@@ -50,7 +50,7 @@ const ClassBlock = styled.div`
   width: 50%;
   margin-left: 30px;
   margin-right: 20px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     margin-left: 10px;
     margin-right: 20px;
   }
@@ -60,7 +60,7 @@ const Class = styled.p`
   color: ${colors.dark};
   font-size: 12px;
   font-weight: 500;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 10px;
   }
 `
@@ -68,7 +68,7 @@ const Class = styled.p`
 const Description = styled.p`
   color: ${colors.gray[4]};
   font-size: 11px;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 9px;
   }
 `
@@ -87,7 +87,7 @@ const Time = styled.p`
   color: ${colors.purple[0]};
   font-size: 9px;
   font-weight: 600;
-  @media (max-width: 415px) {
+  @media (max-width: 768px) {
     font-size: 8px;
   }
 `
