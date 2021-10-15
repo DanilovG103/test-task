@@ -1,9 +1,9 @@
 interface SessionsProps {
   count: number
-  items: SessionsItems[]
+  items: SessionsItem[]
 }
 
-export type SessionsItems = {
+export type SessionsItem = {
   id: string
   class: string
   time: string

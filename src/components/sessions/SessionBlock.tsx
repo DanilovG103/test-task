@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from 'src/theme/colors'
-import { SessionsItems } from 'src/types'
+import { SessionsItem } from 'src/types'
 
 const Row = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ const Time = styled.p`
 `
 
 interface Props {
-  item: SessionsItems
+  item: SessionsItem
 }
 
 export const SessionBlock = ({ item }: Props) => {
