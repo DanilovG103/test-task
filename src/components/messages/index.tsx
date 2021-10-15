@@ -20,7 +20,7 @@ const Wrapper = styled.div<{ shouldHideMessages: boolean }>`
   position: relative;
   @media (max-width: 415px) {
     display: ${(props) => (props.shouldHideMessages ? 'block' : 'none')};
-    margin: 0;
+    margin-bottom: 80px;
     border-radius: 0;
   }
 `

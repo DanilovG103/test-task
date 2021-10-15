@@ -29,6 +29,9 @@ const Block = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  @media (max-width: 415px) {
+    position: relative;
+  }
 `
 
 const NavBlock = styled.div`

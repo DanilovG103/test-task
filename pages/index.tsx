@@ -30,6 +30,7 @@ const Wrapper = styled.div`
       'sessions'
       'messages';
     grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.2fr 1fr 0.1fr;
   }
 `
 
