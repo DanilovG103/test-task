@@ -90,9 +90,9 @@ const ImageWrapper = styled.div`
 export const Header = () => {
   const { user } = useSelector(selectUser)
   const dispatch = useDispatch()
-  const userAvatar = !user ? undefined : user[0].avatar
-  const userName = !user ? undefined : user[0].name
-  const userSurname = !user ? undefined : user[0].surname
+  const userAvatar = user && user[0].avatar
+  const userName = user && user[0].name
+  const userSurname = user && user[0].surname
 
   useEffect(() => {
     dispatch(getUser())

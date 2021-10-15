@@ -100,13 +100,11 @@ export const Sessions = () => {
         <Info>Date</Info>
         <Info>Class</Info>
         <Info>Time</Info>
-        {hasSessions ? (
+        {hasSessions &&
           sessions.items.map((item) => (
             <SessionBlock item={item} key={item.id} />
-          ))
-        ) : (
-          <NoSessions>No sessions</NoSessions>
-        )}
+          ))}
+        {!hasSessions && <NoSessions>No sessions</NoSessions>}
         {error}
       </Container>
       {loading && (

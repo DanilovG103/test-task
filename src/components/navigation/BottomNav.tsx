@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { CoursesIcon } from 'src/components/icons/Courses'
 import { DashboardIcon } from 'src/components/icons/Dashboard'
 import { Notifications } from 'src/components/icons/Notifications'
@@ -35,18 +36,17 @@ const NavTitle = styled.a<{ isActive: boolean }>`
   font-weight: ${(props) => (props.isActive ? 600 : 400)};
 `
 
-const Line = styled.div<{ isActive: boolean }>`
+const Line = styled.div`
   width: 47px;
   height: 5px;
   background-color: ${colors.purple[1]};
   border-radius: 5px;
-  display: ${(props) => (props.isActive ? 'block' : 'none')};
   position: absolute;
   top: 0;
 `
 
 export const BottomNav = () => {
-  const { pathname, push } = useRouter()
+  const { pathname } = useRouter()
 
   const isHomePage = pathname === '/'
   const isCoursesPage = pathname === '/courses'
@@ -55,26 +55,34 @@ export const BottomNav = () => {
 
   return (
     <Wrapper>
-      <NavBlock onClick={() => push('/')}>
-        <Line isActive={isHomePage} />
-        <DashboardIcon isActive={isHomePage} />
-        <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
-      </NavBlock>
-      <NavBlock onClick={() => push('/courses')}>
-        <Line isActive={isCoursesPage} />
-        <CoursesIcon isActive={isCoursesPage} />
-        <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
-      </NavBlock>
-      <NavBlock onClick={() => push('/notifications')}>
-        <Line isActive={isNotificationsPage} />
-        <Notifications isActive={isNotificationsPage} />
-        <NavTitle isActive={isNotificationsPage}>Notifications</NavTitle>
-      </NavBlock>
-      <NavBlock onClick={() => push('/settings')}>
-        <Line isActive={isSettingsPage} />
-        <Setting isActive={isSettingsPage} />
-        <NavTitle isActive={isSettingsPage}>Settings</NavTitle>
-      </NavBlock>
+      <Link href="/">
+        <NavBlock>
+          {isHomePage && <Line />}
+          <DashboardIcon isActive={isHomePage} />
+          <NavTitle isActive={isHomePage}>Dashboard</NavTitle>
+        </NavBlock>
+      </Link>
+      <Link href="/courses">
+        <NavBlock>
+          {isCoursesPage && <Line />}
+          <CoursesIcon isActive={isCoursesPage} />
+          <NavTitle isActive={isCoursesPage}>Courses</NavTitle>
+        </NavBlock>
+      </Link>
+      <Link href="/notifications">
+        <NavBlock>
+          {isNotificationsPage && <Line />}
+          <Notifications isActive={isNotificationsPage} />
+          <NavTitle isActive={isNotificationsPage}>Notifications</NavTitle>
+        </NavBlock>
+      </Link>
+      <Link href="/settings">
+        <NavBlock>
+          {isSettingsPage && <Line />}
+          <Setting isActive={isSettingsPage} />
+          <NavTitle isActive={isSettingsPage}>Settings</NavTitle>
+        </NavBlock>
+      </Link>
     </Wrapper>
   )
 }

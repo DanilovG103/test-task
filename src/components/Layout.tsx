@@ -28,19 +28,11 @@ const Wrapper = styled.div`
   }
 `
 
-const Main = styled.main<{ isMessagesPage: boolean }>`
+const Main = styled.main`
   grid-area: main;
-  padding: 35px;
-  @media (max-width: 415px) {
-    padding: ${(props) => (props.isMessagesPage ? '0' : '25px 15px')};
-  }
 `
 
-export const Layout = ({
-  children,
-  title,
-  isMessagesPage = false,
-}: LayoutProps) => {
+export const Layout = ({ children, title }: LayoutProps) => {
   return (
     <>
       <Head>
@@ -50,7 +42,7 @@ export const Layout = ({
       <Wrapper>
         <AsideMenu />
         <Header />
-        <Main isMessagesPage={isMessagesPage}>{children}</Main>
+        <Main>{children}</Main>
       </Wrapper>
       <BottomNav />
     </>

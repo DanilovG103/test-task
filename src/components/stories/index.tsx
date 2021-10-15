@@ -58,6 +58,7 @@ export const Stories = ({ messagesLoading }: Props) => {
   const { loading, stories } = useSelector(selectStories)
   const dispatch = useDispatch()
   const hasStories = stories.items.length !== 0
+  const showLoader = loading && messagesLoading
 
   useEffect(() => {
     dispatch(getStories())
@@ -71,16 +72,14 @@ export const Stories = ({ messagesLoading }: Props) => {
         </AddCircle>
         <Name>Add</Name>
       </Block>
-      {loading && messagesLoading && (
+      {showLoader && (
         <LoaderWrapper>
           <Loading />
         </LoaderWrapper>
       )}
-      {hasStories ? (
-        stories.items.map((item) => <StoriesBlock item={item} key={item.id} />)
-      ) : (
-        <NoStories>No stories</NoStories>
-      )}
+      {hasStories &&
+        stories.items.map((item) => <StoriesBlock item={item} key={item.id} />)}
+      {!hasStories && <NoStories>No stories</NoStories>}
     </Wrapper>
   )
 }

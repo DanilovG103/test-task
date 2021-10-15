@@ -34,18 +34,28 @@ const Wrapper = styled.div`
   }
 `
 
+const Container = styled.div`
+  padding: 35px;
+  @media (max-width: 415px) {
+    padding: 25px 15px;
+  }
+`
+
 const Home: NextPage = () => {
   const { user } = useSelector(selectUser)
-  const userName = !user ? undefined : user[0].name
+  const userName = user && user[0].name
+
   return (
     <Layout title="Home">
-      <Greeting>Hello, {userName}!</Greeting>
-      <Wrapper>
-        <ActivePrograms />
-        <Research />
-        <Sessions />
-        <MessagesContent />
-      </Wrapper>
+      <Container>
+        <Greeting>Hello, {userName}!</Greeting>
+        <Wrapper>
+          <ActivePrograms />
+          <Research />
+          <Sessions />
+          <MessagesContent />
+        </Wrapper>
+      </Container>
     </Layout>
   )
 }
