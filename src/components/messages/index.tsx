@@ -111,6 +111,8 @@ export const MessagesContent = () => {
     dispatch(getMessages())
   }, [dispatch])
 
+  console.log(messages)
+
   return (
     <Wrapper shouldHideMessages={shouldHideMessages}>
       <Block>

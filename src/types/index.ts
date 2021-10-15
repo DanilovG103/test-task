@@ -1,9 +1,9 @@
 interface SessionsProps {
   count: number
-  items: SessionsItem[]
+  items: Session[]
 }
 
-export type SessionsItem = {
+export type Session = {
   id: string
   class: string
   time: string
@@ -13,18 +13,22 @@ export type SessionsItem = {
   month: string
 }
 
-export interface MessagesProps {
+export interface Message {
   id: string
   name: string
   avatar: string
   content: string
   time: string
+  unread: {
+    status: boolean
+    count: number
+  }
 }
 
-export interface Message {
+export interface Messages {
   loading: boolean
   messages: {
-    items: MessagesProps[]
+    items: Message[]
   }
   error?: string
 }
@@ -32,7 +36,7 @@ export interface Message {
 export interface Stories {
   loading: boolean
   stories: {
-    items: StoriesProps[]
+    items: Story[]
   }
   error?: string
 }
@@ -43,7 +47,7 @@ export interface Sessions {
   error?: string
 }
 
-export interface StoriesProps {
+export interface Story {
   id: string
   name: string
   avatar: string
@@ -64,7 +68,7 @@ export interface User {
 
 export interface AppState {
   sessions: Sessions
-  messages: Message
+  messages: Messages
   stories: Stories
   user: User
 }

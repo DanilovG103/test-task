@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from 'src/theme/colors'
-import { StoriesProps } from 'src/types'
+import { Story } from 'src/types'
 
 interface Props {
-  item: StoriesProps
+  item: Story
 }
 
 const Block = styled.div`

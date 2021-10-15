@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { baseUrl } from 'src/api/config'
-import { Message } from 'src/types'
+import { Message, Messages } from 'src/types'
 
-const initialState: Message = {
+const initialState: Messages = {
   loading: false,
   messages: {
     items: [],
@@ -18,17 +18,35 @@ export const getMessages = createAsyncThunk(
   },
 )
 
+const setUnread = (items: Message[]) => {
+  const newMessages = items.map((item) => ({
+    ...item,
+    unread: {
+      status: Math.random() > 0.5,
+      count: Math.ceil(Math.random() * 10),
+    },
+  }))
+
+  return newMessages
+}
+
 const messageSlice = createSlice({
   name: 'message',
   initialState,
-  reducers: {},
+  reducers: {
+    setRead(state, { payload }) {
+      state.messages.items
+        .filter((item) => item.id === payload)
+        .map((item) => (item.unread.status = false))
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getMessages.pending, (state) => {
       state.loading = true
     })
 
     builder.addCase(getMessages.fulfilled, (state, { payload }) => {
-      state.messages.items = payload
+      state.messages.items = setUnread(payload)
       state.loading = false
     })
 
@@ -40,3 +58,4 @@ const messageSlice = createSlice({
 })
 
 export default messageSlice.reducer
+export const { setRead } = messageSlice.actions

@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { colors } from 'src/theme/colors'
-import { MessagesProps } from 'src/types'
+import { Message } from 'src/types'
+import { setRead } from 'src/store/reducers/messages'
+import { useDispatch } from 'react-redux'
 
 interface Props {
-  message: MessagesProps
+  message: Message
 }
 
 interface StyleProps {
@@ -66,24 +68,24 @@ const Time = styled.p`
   color: ${colors.gray[7]};
 `
 
-const randomNumber = Math.ceil(Math.random() * 10)
-
 export const MessageCard = ({ message }: Props) => {
-  const [unread, setUnread] = useState(Math.random() > 0.5)
+  const dispatch = useDispatch()
 
   return (
-    <Container onClick={() => setUnread(false)}>
+    <Container onClick={() => dispatch(setRead(message.id))}>
       <Avatar src={message.avatar} alt={message.name} />
       <div>
         <ContentRow>
-          <Name unread={unread}>{message.name}</Name>
+          <Name unread={message.unread.status}>{message.name}</Name>
           <Time>{message.time}</Time>
         </ContentRow>
         <ContentRow>
           <TextWrapper>
-            <Content unread={unread}>{message.content}</Content>
+            <Content unread={message.unread.status}>{message.content}</Content>
           </TextWrapper>
-          {unread && <MessagesCount>{randomNumber}</MessagesCount>}
+          {message.unread.status && (
+            <MessagesCount>{message.unread.count}</MessagesCount>
+          )}
         </ContentRow>
       </div>
     </Container>
