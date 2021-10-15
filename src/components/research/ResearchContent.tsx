@@ -40,7 +40,7 @@ const Row = styled.div`
   justify-content: space-between;
   margin-top: 10px;
   @media (max-width: 415px) {
-    margin: 4px 0 4px 8px;
+    margin: 4px 4px 4px 8px;
   }
 `
 
